@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Learning Alliance</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GSAP for Premium Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- Google Fonts for Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+</head>
+
+<body>
+
+    <section class="hero-section programs-hero">
+        <!-- UI Geometric Lines -->
+        <div class="ui-line-h programs-line-h"></div>
+        <div class="ui-line-v about-line-v" style="display: none;"></div>
+
+        <!-- Navbar / Top Header -->
+        <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
+                </a>
+            </div>
+            <div class="menu-btn d-flex flex-column align-items-center">
+                <img src="assets/images/menu-button.jpg" alt="Menu" height="35">
+            </div>
+        </header>
+
+        <!-- Programs Box Content -->
+        <div class="container h-100 position-relative z-2">
+            <div class="row h-100 align-items-center justify-content-start">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="programs-box about-animate">
+                        <h1 class="fw-bold text-white mb-4">Programs</h1>
+                        <ul class="programs-list">
+                            <li><a href="#">Junior & Middle School</a></li>
+                            <li><a href="#">O Level</a></li>
+                            <li><a href="#">A Level</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Menu (Full Match with Index) -->
+        <div id="sideMenu" class="side-menu">
+            <button id="closeMenu" class="close-btn">&times;</button>
+            <nav class="menu-nav">
+                <a href="index.html" class="menu-header">Learning Alliance</a>
+                <a href="about-us.html">About us</a>
+                <a href="programs.html" class="active">Programs</a>
+                <a href="student-policies.html">Student Policies</a>
+                <a href="co-curricular.html">Co Curricular</a>
+                <a href="#">Admissions</a>
+                <a href="#">Life at LA</a>
+                <a href="#">Contact US</a>
+            </nav>
+        </div>
+    </section>
+
+    <section class="programs-detail-section py-5">
+        <div class="container py-lg-5">
+            <!-- Part 1: Image and Action Buttons -->
+            <div class="row g-0 align-items-stretch mb-0 mb-lg-0">
+                <div class="col-lg-6">
+                    <div class="program-img-wrapper h-100 overflow-hidden">
+                        <img src="assets/images/schoolgirl.jpg" alt="Junior & Middle School student"
+                            class="img-fluid h-100 w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center bg-white p-4 p-lg-5">
+                    <!-- Action Buttons -->
+                    <div class="program-actions w-100 ps-lg-5" style="max-width: 450px;">
+                        <div class="program-action-btn mb-4">
+                            <div class="action-icon red-bg"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="action-label red-bg">Overview</div>
+                        </div>
+                        <div class="program-action-btn">
+                            <div class="action-icon yellow-bg"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="action-label yellow-bg">A Level</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 2: Title and Green Info Box -->
+            <div class="row g-0 align-items-stretch">
+                <div class="col-lg-6 d-flex align-items-center bg-white p-4 p-lg-5">
+                    <div class="program-title-box">
+                        <h2 class="fw-bold text-dark">Junior & Middle<br>School</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="program-info-box green-bg p-4 p-lg-5 h-100 d-flex align-items-center">
+                        <p class="text-white lead mb-0" style="font-size: 1.25rem; line-height: 1.6; font-weight: 500;">
+                            We provide exceptional learning opportunities, world-class resources, and a dynamic
+                            environment that empowers our students to become independent, self-motivated learners. Our
+                            mission is to inspire exploration, support informed choices, and help students understand
+                            themselves and the world, shaping them into responsible, respectful, and engaged citizens.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-detail-section green-line-section o-level-section bg-white">
+        <div class="container py-lg-5">
+            <!-- Top: Reduced Width Image -->
+            <div class="row g-0 mb-5">
+                <div class="col-lg-8">
+                    <div class="program-full-img rounded-1 overflow-hidden" style="height: 480px;">
+                        <img src="assets/images/uniboy.jpg" alt="O Level Student" class="img-fluid w-100 h-100"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Title/Buttons and Yellow Box -->
+            <div class="row g-0 align-items-start">
+
+                <div class="col-lg-7">
+                    <div class="program-title-box mb-4">
+                        <h2 class="fw-bold text-dark display-4">O Level</h2>
+                    </div>
+                    <!-- Buttons Stacked -->
+                    <div class="program-actions pe-lg-5" style="max-width: 500px;">
+                        <div class="program-action-btn mb-3">
+                            <div class="action-icon yellow-bg"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="action-label yellow-bg">O Level Introduction</div>
+                        </div>
+                        <div class="program-action-btn mb-3">
+                            <div class="action-icon red-bg"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="action-label red-bg">Compulsory Subjects</div>
+                        </div>
+                        <div class="program-action-btn">
+                            <div class="action-icon yellow-bg"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="action-label yellow-bg">Elective Subjects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="program-info-box yellow-bg p-4 p-lg-5 h-100 d-flex align-items-center rounded-1">
+                        <p class="text-dark mb-0" style="font-size: 1.2rem; line-height: 1.6; font-weight: 500;">
+                            The Cambridge O Level Programme at Learning Alliance follows Ministry of Education
+                            requirements and is taught by experienced subject specialists. Our purpose-built academic
+                            block supports coursework and gives students the space to explore their strengths. Students
+                            take 5 compulsory subjects and choose either 3 optional subjects or one full subject group.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="programs-detail-section a-level-section py-5 bg-white">
+        <div class="container py-lg-5">
+            <div class="row g-0 position-relative align-items-stretch">
+                <!-- Left: Image -->
+                <div class="col-lg-6">
+                    <div class="program-img-wrapper h-100 overflow-hidden">
+                        <img src="assets/images/unimen.jpg" alt="A Level Student" class="img-fluid h-100 w-100" style="object-fit: cover; min-height: 450px;">
+                    </div>
+                </div>
+                <!-- Right: Title -->
+                <div class="col-lg-6 d-flex align-items-center justify-content-center bg-white p-5">
+                    <div class="program-title-box">
+                        <h2 class="fw-bold text-dark display-3">A Level</h2>
+                    </div>
+                </div>
+                
+                <!-- Overlapping Red Box -->
+                <div class="red-overlap-box red-bg p-4 p-lg-5 d-flex align-items-center">
+                    <p class="text-white mb-0" style="font-size: 1.15rem; line-height: 1.6; font-weight: 500;">
+                        Students in Pakistan take AS/A Levels for local and international university admissions.
+                        <br><br>
+                        Learning Alliance offers 17 A Level subjects and the option to complete the qualification through a staged route: AS in one exam session, A Level the next year. (Urdu is the only exception.) We register students for the June exam series, with results released in August.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Full Footer (Shared Component) -->
+    <footer class="site-footer">
+        <div class="container container-custom">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="v-line f-animate-line" style="height: 50px; margin-bottom: 20px;"></div>
+                    <div class="f-box f-red f-animate-box" style="transition-delay: 0.2s;">Where</div>
+                    <div class="f-box f-yellow f-animate-box" style="transition-delay: 0.4s;">Potential becomes</div>
+                    <div class="f-box f-white f-animate-box" style="transition-delay: 0.6s;">Achievement</div>
+                    <img src="https://learn.fountainhead.pk/wp-content/uploads/2025/10/la.png"
+                        class="footer-logo f-animate-logo" alt="Logo" style="transition-delay: 0.8s;">
+                </div>
+                <!-- Right Columns -->
+                <div class="col-lg-7 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                            <h5 class="f-title">Get in touch</h5>
+                            <div class="f-text">Learning Alliance</div>
+                            <div class="f-text">32/1- J Block, DHA Phase Viii,</div>
+                            <div class="f-text">Lahore</div>
+                            <div class="mt-4 mb-2"><a href="mailto:info@learningalliance.com"
+                                    class="f-link mb-1">info@learningalliance.com</a></div>
+                            <div><a href="tel:042111666633" class="f-link">(042) 111 666 633</a></div>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                            <h5 class="f-title">Helpful Links</h5>
+                            <a href="index.html" class="f-link">Homepage</a>
+                            <a href="#" class="f-link">Admissions</a>
+                            <a href="about-us.html" class="f-link">About</a>
+                            <a href="#" class="f-link">Locations</a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                            <h5 class="f-title">Contact us</h5>
+                            <a href="#" class="f-link">Admissions</a>
+                            <a href="about-us.html" class="f-link">About</a>
+                            <a href="#" class="f-link">Locations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-4">
+                <div class="col-12 d-flex flex-column">
+                    <div class="v-line f-animate-line"
+                        style="height: 50px; margin-bottom: 20px; transition-delay: 1.0s;"></div>
+                    <div class="d-flex align-items-center w-100 p-0 m-0">
+                        <div class="copyright f-animate-fade" style="transition-delay: 1.2s;">© Learning Alliance 2025
+                        </div>
+                        <div class="developer-text ms-auto f-animate-fade"
+                            style="transition-delay: 1.2s; position: static;">
+                            Designed and Powered by the Department of IT <span> - Learning Alliance</span>
+                        </div>
+                    </div>
+                    <div class="v-line f-animate-line" style="height: 50px; margin-top: 20px; transition-delay: 1.4s;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="topBtn" class="btn btn-dark rounded-circle position-fixed"
+        style="bottom: 30px; right: 30px; width: 50px; height: 50px; z-index: 10000; display: none; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.1);">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // GSAP Sequence
+            const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+            // 1. Geometric Line Animation
+            tl.fromTo('.programs-line-h',
+                { scaleX: 0, transformOrigin: "left" },
+                { scaleX: 1, duration: 1.5, delay: 0.3, ease: "power2.inOut" }
+            );
+
+            // 2. Box Reveal
+            tl.fromTo('.about-animate',
+                { opacity: 0, x: -50 },
+                { opacity: 1, x: 0, duration: 1, ease: "power3.out" },
+                "-=1.0"
+            );
+
+            // Menu Toggle
+            const menuBtn = document.querySelector('.menu-btn');
+            const sideMenu = document.getElementById('sideMenu');
+            const closeMenu = document.getElementById('closeMenu');
+
+            menuBtn.addEventListener('click', () => {
+                sideMenu.classList.add('active');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                sideMenu.classList.remove('active');
+            });
+
+            // Scroll animations
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+            // Footer Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.f-animate-line, .f-animate-box, .f-animate-logo, .f-animate-fade').forEach(el => observer.observe(el));
+
+            // 3. Programs Detail Sections Scroll Animation (Enhanced)
+            gsap.utils.toArray('.programs-detail-section').forEach((section) => {
+                // Grow the vertical accent line
+                gsap.fromTo(section,
+                    { "--line-scale": 0 },
+                    {
+                        "--line-scale": 1,
+                        duration: 2,
+                        ease: "power4.inOut",
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+                // Image Parallax Effect
+                const img = section.querySelector('img');
+                if (img) {
+                    gsap.to(img, {
+                        y: 40,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: true
+                        }
+                    });
+                }
+
+                // Word-by-Word Reveal for Info Box Text
+                const infoText = section.querySelector('.program-info-box p');
+                if (infoText) {
+                    const textContent = infoText.innerText;
+                    infoText.innerHTML = textContent.split(' ').map(word => `<span>${word}</span>`).join(' ');
+                    const spans = infoText.querySelectorAll('span');
+
+                    gsap.fromTo(spans,
+                        { opacity: 0.2, y: 10 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            stagger: 0.015,
+                            duration: 0.5,
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: infoText,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                }
+
+                // Internal elements staggered reveal
+                const children = section.querySelectorAll('.program-img-wrapper, .program-full-img, .program-actions, .program-title-box, .program-info-box');
+                gsap.fromTo(children,
+                    { opacity: 0, y: 60, scale: 0.95 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 1.4,
+                        stagger: 0.2,
+                        ease: "expo.out",
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            });
+
+
+
+            // Back to Top (Synchronized Logic)
+            const topBtn = document.getElementById('topBtn');
+            if (topBtn && window.gsap && window.ScrollTrigger) {
+                gsap.set(topBtn, { opacity: 0, y: 50, display: 'none' });
+
+                ScrollTrigger.create({
+                    start: 200,
+                    onUpdate: (self) => {
+                        if (self.progress > 0) {
+                            gsap.to(topBtn, { opacity: 1, y: 0, display: 'flex', duration: 0.3, ease: 'power2.out', overwrite: 'auto' });
+                        } else {
+                            gsap.to(topBtn, { opacity: 0, y: 50, display: 'none', duration: 0.3, ease: 'power2.in' });
+                        }
+                    }
+                });
+
+                topBtn.addEventListener('click', () => {
+                    if (window.gsap && window.ScrollToPlugin) {
+                        gsap.to([window, document.documentElement, document.body], { scrollTo: 0, duration: 1, ease: "power4.inOut" });
+                    } else {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
