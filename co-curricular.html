@@ -191,11 +191,20 @@
             </div>
 
             <div class="green-detail-box p-4 p-lg-4 mb-4 animate-green-box">
-                <p class="mb-3">At Learning Alliance, students are provided with the opportunity to perform drama through various outlets outside the classroom. Our dedicated staff often plays an important role in guiding students through their theatrical journey!</p>
-                <p class="mb-3">Our senior school runs its own drama club known as the 'Phoenix Drama Society'. All students are given the chance to play up their potential and show off their talent on stage. The Phoenix Drama Society has held successful plays at school, the Ali Auditorium and Lahore's Al Hamra Arts Council!</p>
+                <p class="mb-3">At Learning Alliance, students are provided with the opportunity to perform drama
+                    through various outlets outside the classroom. Our dedicated staff often plays an important role in
+                    guiding students through their theatrical journey!</p>
+                <p class="mb-3">Our senior school runs its own drama club known as the 'Phoenix Drama Society'. All
+                    students are given the chance to play up their potential and show off their talent on stage. The
+                    Phoenix Drama Society has held successful plays at school, the Ali Auditorium and Lahore's Al Hamra
+                    Arts Council!</p>
                 <p class="mb-3 fw-bold">The Phoenix Dramatics Society</p>
-                <p>The 'Phoenix Drama Society' is an entirely student run organization. Everyone is welcome to join and participate in any capacity they may prefer. In the past few years, the club has put on some spectacular shows and highlighted the immense amount of talent our student body carries. The 2013-2014 school play 'Kaisa Paisa' was a roaring success and lauded by students, parents and staff alike!</p>
-                
+                <p>The 'Phoenix Drama Society' is an entirely student run organization. Everyone is welcome to join and
+                    participate in any capacity they may prefer. In the past few years, the club has put on some
+                    spectacular shows and highlighted the immense amount of talent our student body carries. The
+                    2013-2014 school play 'Kaisa Paisa' was a roaring success and lauded by students, parents and staff
+                    alike!</p>
+
                 <div class="co-carousel mt-4 position-relative overflow-hidden" id="sportsCarousel">
                     <div class="carousel-track d-flex gap-4">
                         <div class="co-carousel-item flex-shrink-0 animate-carousel-img">
@@ -224,10 +233,14 @@
             </div>
 
             <div class="red-detail-box p-4 p-lg-4 mb-4 animate-red-box">
-                <p class="mb-3">The Arts Department at Learning Alliance encourages students to explore their creative potential through various mediums. From fine arts to digital design, we provide a space for artistic expression and growth!</p>
-                <p class="mb-3">Our students showcase their work in annual exhibitions and contribute to the school's vibrant visual landscape. We believe in the power of art to transform perspectives and build creative confidence.</p>
+                <p class="mb-3">The Arts Department at Learning Alliance encourages students to explore their creative
+                    potential through various mediums. From fine arts to digital design, we provide a space for artistic
+                    expression and growth!</p>
+                <p class="mb-3">Our students showcase their work in annual exhibitions and contribute to the school's
+                    vibrant visual landscape. We believe in the power of art to transform perspectives and build
+                    creative confidence.</p>
                 <p>Join us in celebrating the rich tapestry of artistic talent within our student body.</p>
-                
+
                 <div class="co-carousel mt-4 position-relative overflow-hidden" id="artsCarousel">
                     <div class="carousel-track d-flex gap-4">
                         <div class="co-carousel-item flex-shrink-0 animate-carousel-img">
@@ -257,7 +270,7 @@
             <a href="programs.html">Programs</a>
             <a href="student-policies.html">Student Policies</a>
             <a href="co-curricular.html" class="active">Co Curricular</a>
-            <a href="#">Admissions</a>
+            <a href="admissions.html">Admissions</a>
             <a href="#">Life at LA</a>
             <a href="#">Contact US</a>
         </nav>
@@ -399,12 +412,12 @@
             function initCarousel(carouselId) {
                 const container = document.getElementById(carouselId);
                 if (!container) return;
-                
+
                 const track = container.querySelector('.carousel-track');
                 const items = Array.from(track.querySelectorAll('.co-carousel-item'));
                 const nextBtn = container.querySelector('.next');
                 const prevBtn = container.querySelector('.prev');
-                
+
                 // Clone items so we have enough content to scroll if there's only 3
                 items.forEach(item => {
                     const clone = item.cloneNode(true);
@@ -466,39 +479,39 @@
                 const box = section.querySelector('.yellow-detail-box, .red-detail-box, .green-detail-box');
                 const items = section.querySelectorAll('.co-carousel-item');
 
-                gsap.fromTo(header, 
+                gsap.fromTo(header,
                     { opacity: 0, filter: "blur(10px)", scale: 0.9 },
-                    { 
-                        opacity: 1, filter: "blur(0px)", scale: 1, duration: 1.2, 
+                    {
+                        opacity: 1, filter: "blur(0px)", scale: 1, duration: 1.2,
                         scrollTrigger: { trigger: section, start: "top 85%" }
                     }
                 );
 
-                gsap.fromTo(underline, 
+                gsap.fromTo(underline,
                     { width: 0 },
-                    { 
-                        width: "250px", duration: 1.2, 
+                    {
+                        width: "250px", duration: 1.2,
                         scrollTrigger: { trigger: section, start: "top 85%" }
                     }
                 );
 
-                gsap.fromTo(box, 
+                gsap.fromTo(box,
                     { opacity: 0, y: 50 },
-                    { 
+                    {
                         opacity: 1, y: 0, duration: 1, ease: "power2.out",
                         scrollTrigger: { trigger: box, start: "top 85%" }
                     }
                 );
 
-                gsap.fromTo(items, 
+                gsap.fromTo(items,
                     { opacity: 0, y: 30, scale: 0.95 },
-                    { 
+                    {
                         opacity: 1, y: 0, scale: 1, duration: 1, stagger: 0.15,
                         scrollTrigger: { trigger: section, start: "top 75%" }
                     }
                 );
             });
-;
+            ;
 
 
 
