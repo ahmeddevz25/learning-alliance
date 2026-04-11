@@ -43,11 +43,11 @@
             <h1 class="policies-title text-white mb-5 animate-text">Life at LA</h1>
 
             <div class="d-flex flex-wrap justify-content-center gap-3 animate-buttons">
-                <a href="#" class="policy-btn">Life at LA</a>
-                <a href="#" class="policy-btn">Student Council</a>
-                <a href="#" class="policy-btn">Term Dates</a>
-                <a href="#" class="policy-btn">Magazine & Yearbook</a>
-                <a href="#" class="policy-btn">News & Events</a>
+                <a href="#life-intro-sec" class="policy-btn">Life at LA</a>
+                <a href="#student-council-sec" class="policy-btn">Student Council</a>
+                <a href="#magazine-yearbook-sec" class="policy-btn">Term Dates</a>
+                <a href="#magazine-yearbook-sec" class="policy-btn">Magazine & Yearbook</a>
+                <a href="#news-events-sec" class="policy-btn">News & Events</a>
                 <a href="#" class="policy-btn">OSLA</a>
             </div>
         </div>
@@ -75,15 +75,15 @@
                 <a href="programs.html">Programs</a>
                 <a href="student-policies.html" class="active">Student Policies</a>
                 <a href="co-curricular.html">Co Curricular</a>
-                <a href="#">Admissions</a>
-                <a href="#">Life at LA</a>
-                <a href="#">Contact US</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="life-at-la.html">Life at LA</a>
+                <a href="contact-us.html">Contact US</a>
             </nav>
         </div>
     </section>
 
 
-    <section class="life-intro-section py-5 position-relative overflow-hidden">
+    <section id="life-intro-sec" class="life-intro-section py-5 position-relative overflow-hidden">
         <!-- UI Structural Lines -->
         <div class="ui-line-v-content tricolor"></div>
 
@@ -91,9 +91,9 @@
             <div class="row align-items-center g-5 justify-content-center">
                 <!-- Left: Image -->
                 <div class="col-lg-6 animate-intro-img text-center">
-                    <div class="intro-img-wrapper" style="max-width: 650px; margin: 0 auto;">
+                    <div class="intro-img-wrapper" style="max-width: 450px; margin: 0 auto;">
                         <img src="assets/images/uniboy.jpg" alt="Student at Library" class="img-fluid rounded-0"
-                            style="width: 100%; height: auto; object-fit: cover; box-shadow: 0 25px 50px rgba(0,0,0,0.15);">
+                            style="width: 100%; height: auto; object-fit: cover; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
                     </div>
                 </div>
                 <!-- Right: Content -->
@@ -178,9 +178,283 @@
             </div>
         </div>
     </section>
+    <!-- Magazine & Yearbook Section -->
+    <section class="yearbook-section position-relative bg-light" id="magazine-yearbook-sec" style="padding: 80px 0;">
+        <div class="ui-line-v-content tricolor"></div>
+
+        <div class="container py-lg-4">
+            <!-- Section Header -->
+            <div class="text-center mb-5 animate-yearbook-header">
+                <h2 class="council-watermark">MAGAZINE & YEARBOOK</h2>
+                <div class="council-underline"></div>
+            </div>
+
+            <!-- Yearbook Content Grid (Constrained Width for Smaller Cards) -->
+            <div class="row g-4 yearbook-grid animate-yearbook-grid justify-content-center"
+                style="max-width: 1050px; margin: 0 auto;">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="council-full-image-card px-2">
+                        <img src="assets/images/book1.png" alt="Yearbook 1" class="img-fluid w-100 shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="council-full-image-card px-2">
+                        <img src="assets/images/book2.png" alt="Yearbook 2" class="img-fluid w-100 shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="council-full-image-card px-2">
+                        <img src="assets/images/book3.png" alt="Yearbook 3" class="img-fluid w-100 shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="council-full-image-card px-2">
+                        <img src="assets/images/book4.png" alt="Yearbook 4" class="img-fluid w-100 shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="council-full-image-card px-2">
+                        <img src="assets/images/book5.png" alt="Yearbook 5" class="img-fluid w-100 shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="council-full-image-card px-2">
+                        <img src="assets/images/book6.png" alt="Yearbook 6" class="img-fluid w-100 shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-events-section py-5 my-5 position-relative overflow-hidden" id="news-events-sec">
+        <div class="container position-relative news-container-responsive" style="max-width: 1300px;">
+            <!-- Vertical Watermark Heading -->
+            <div class="vertical-news-watermark">NEWS & EVENTS</div>
+
+            <div id="admissionsSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1: Orange Border Theme -->
+                    <div class="carousel-item active">
+                        <div class="row g-0 align-items-stretch"
+                            style="border: 1px solid #d4502d; background-color: #f1f2f2;">
+                            <div class="col-lg-8 border-end"
+                                style="border-right: 1px solid #d4502d !important; position: relative;">
+                                <img src="assets/images/slider1.jpg" class="d-block w-100 h-100"
+                                    style="object-fit: cover; min-height: 500px;" alt="Admissions August 2025">
+                            </div>
+                            <!-- Right Event Card -->
+                            <div class="col-lg-4">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center px-4 px-md-5 py-5 overflow-hidden">
+                                    <span class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 0.85rem; letter-spacing: 1px; color: #111;">EVENT</span>
+                                    <h2 class="event-anim-element fw-bold mb-5"
+                                        style="font-size: 2rem; line-height: 1.2; color: #000;">Admissions
+                                        August<br>2025-2026</h2>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-calendar"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">14 Aug 2025</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-clock"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">18:30 - 21h00</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-start mb-4">
+                                        <span style="width: 25px; display: inline-block;"></span>
+                                        <span style="font-size: 0.95rem; line-height: 1.4; color: #111;">The Other
+                                            House, South Kensington, London</span>
+                                    </div>
+                                    <div class="event-anim-element mt-2 mb-4"><span class="fw-bold"
+                                            style="font-size: 0.85rem; color: #000;">Find out more</span></div>
+                                    <div class="event-anim-element">
+                                        <a href="#"
+                                            class="btn btn-dark rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-between"
+                                            style="min-width: 200px; font-size: 0.95rem;">
+                                            <span>Find out more</span> <span class="ms-3">&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Navy Blue Border Theme -->
+                    <div class="carousel-item">
+                        <div class="row g-0 align-items-stretch"
+                            style="border: 1px solid #1a3c6d; background-color: #f1f2f2;">
+                            <div class="col-lg-8 border-end"
+                                style="border-right: 1px solid #1a3c6d !important; position: relative;">
+                                <img src="assets/images/slider2.jpg" class="d-block w-100 h-100"
+                                    style="object-fit: cover; min-height: 500px;" alt="Admissions August 2025">
+                            </div>
+                            <div class="col-lg-4">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center px-4 px-md-5 py-5 overflow-hidden">
+                                    <span class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 0.85rem; letter-spacing: 1px; color: #111;">EVENT</span>
+                                    <h2 class="event-anim-element fw-bold mb-5"
+                                        style="font-size: 2rem; line-height: 1.2; color: #000;">Admissions
+                                        August<br>2025-2026</h2>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-calendar"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">14 Aug 2025</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-clock"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">18:30 - 21h00</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-start mb-4">
+                                        <span style="width: 25px; display: inline-block;"></span>
+                                        <span style="font-size: 0.95rem; line-height: 1.4; color: #111;">The Other
+                                            House, South Kensington, London</span>
+                                    </div>
+                                    <div class="event-anim-element mt-2 mb-4"><span class="fw-bold"
+                                            style="font-size: 0.85rem; color: #000;">Find out more</span></div>
+                                    <div class="event-anim-element">
+                                        <a href="#"
+                                            class="btn btn-dark rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-between"
+                                            style="min-width: 200px; font-size: 0.95rem;">
+                                            <span>Find out more</span> <span class="ms-3">&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Red Border Theme -->
+                    <div class="carousel-item">
+                        <div class="row g-0 align-items-stretch"
+                            style="border: 1px solid #a62a2a; background-color: #f1f2f2;">
+                            <div class="col-lg-8 border-end"
+                                style="border-right: 1px solid #a62a2a !important; position: relative;">
+                                <img src="assets/images/slider3.jpg" class="d-block w-100 h-100"
+                                    style="object-fit: cover; min-height: 500px;" alt="Lorem Ipsum">
+                            </div>
+                            <div class="col-lg-4">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center px-4 px-md-5 py-5 overflow-hidden">
+                                    <span class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 0.85rem; letter-spacing: 1px; color: #111;">EVENT</span>
+                                    <h2 class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 2rem; line-height: 1.2; color: #000;">Lorem<br>Ipsum</h2>
+                                    <p class="event-anim-element mb-5"
+                                        style="font-size: 0.95rem; line-height: 1.6; color: #111;">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    </p>
+                                    <div class="event-anim-element">
+                                        <a href="#"
+                                            class="btn btn-dark rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-between"
+                                            style="min-width: 200px; font-size: 0.95rem;">
+                                            <span>Find out more</span> <span class="ms-3">&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Yellow Circle Navigation Controls -->
+                <button class="yellow-circle-nav-btn prev" type="button" data-bs-target="#admissionsSlider"
+                    data-bs-slide="prev" style="left: -32px;">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="yellow-circle-nav-btn next" type="button" data-bs-target="#admissionsSlider"
+                    data-bs-slide="next" style="left: calc(66.666667% - 32px); right: auto;">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magazine & Yearbook Section -->
+    <section class="magazine-section py-5 my-5 text-center position-relative">
+        <div class="container" style="max-width: 876px;">
+            <!-- Heading -->
+            <h2 class="fw-bold mb-3" style="color: #9c9c9c; font-size: 2.2rem; letter-spacing: 2px;">MAGAZINE & YEARBOOK
+            </h2>
+            <div class="mx-auto" style="width: 80px; height: 3px; background-color: #a92a31; margin-bottom: 2.5rem;">
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+                <button id="filter-dha" class="magazine-filter btn px-4 py-2"
+                    style="background-color: #fce144; border: 1px solid #fce144; border-radius: 0; font-size: 0.85rem; font-weight: 500; min-width: 120px;">DHA</button>
+                <button class="magazine-filter btn bg-white px-4 py-2"
+                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Aziz
+                    Avenue</button>
+                <button class="magazine-filter btn bg-white px-4 py-2"
+                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Gulberg</button>
+                <button class="magazine-filter btn bg-white px-4 py-2"
+                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Faisalabad</button>
+            </div>
+
+            <!-- Flipbooks Row -->
+            <div class="row pt-4 pb-5 justify-content-center gx-5">
+                <!-- Book 1 (Offset: Red) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine1.pdf"
+                        style="box-shadow: -15px 15px 0px 0px #ac3437; background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/flipbook1.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2022-23">
+                    </div>
+                </div>
+                <!-- Book 2 (Offset: Green) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine2.pdf"
+                        style="box-shadow: -15px 15px 0px 0px #136236; background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/flipbook2.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2024">
+                    </div>
+                </div>
+                <!-- Book 3 (Offset: Yellow) -->
+                <div class="col-md-4 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine3.pdf"
+                        style="box-shadow: -15px 15px 0px 0px #f8cf28; background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/flipbook3.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2025">
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Follow -->
+            <div class="d-flex justify-content-end align-items-center mt-5">
+                <span class="fs-5 me-3" style="font-weight: 500;">Follow us on social media</span>
+                <div class="social-icons d-flex gap-2">
+                    <a href="#"
+                        class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
+                        style="width: 32px; height: 32px; text-decoration: none;">
+                        <i class="fa-brands fa-instagram fs-6"></i>
+                    </a>
+                    <a href="#"
+                        class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
+                        style="width: 32px; height: 32px; text-decoration: none;">
+                        <i class="fa-brands fa-facebook-f fs-6"></i>
+                    </a>
+                    <a href="#"
+                        class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
+                        style="width: 32px; height: 32px; text-decoration: none;">
+                        <i class="fa-brands fa-linkedin-in fs-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Structural left frame line -->
+        <div class="position-absolute d-none d-md-block"
+                                            style="left: 45px; top: -50px; bottom: -50px; width: 3px; background-color: #a92a31;"></div>
+    </section>
+
+
 
     <!-- Full Footer (Shared Component) -->
-
     <footer class="site-footer">
         <div class="container container-custom">
             <div class="row">
@@ -213,15 +487,15 @@
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
                             <a href="index.html" class="f-link">Homepage</a>
-                            <a href="#" class="f-link">Admissions</a>
+                            <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
-                            <a href="#" class="f-link">Locations</a>
+                            <a href="contact-us.html" class="f-link">Locations</a>
                         </div>
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Contact us</h5>
-                            <a href="#" class="f-link">Admissions</a>
+                            <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
-                            <a href="#" class="f-link">Locations</a>
+                            <a href="contact-us.html" class="f-link">Locations</a>
                         </div>
                     </div>
                 </div>
@@ -235,9 +509,7 @@
                         <div class="copyright f-animate-fade" style="transition-delay: 1.2s;">© Learning Alliance 2025
                         </div>
                         <div class="developer-text ms-auto f-animate-fade"
-                            style="transition-delay: 1.2s; position: static;">
-                            Designed and Powered by the Department of IT <span> - Learning Alliance</span>
-                        </div>
+                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning Alliance</span></div>
                     </div>
                     <div class="v-line f-animate-line" style="height: 50px; margin-top: 20px; transition-delay: 1.4s;">
                     </div>
@@ -348,10 +620,34 @@
                 scrollTrigger: { trigger: '.council-section', start: "top 85%" }
             });
 
-            gsap.from('.council-full-image-card', {
+            gsap.from('.council-grid .council-full-image-card', {
                 opacity: 0, y: 60, scale: 0.95, stagger: 0.15, duration: 1.2, ease: "expo.out",
                 scrollTrigger: { trigger: '.council-grid', start: "top 85%" }
             });
+
+            // Yearbook Section Animations
+            gsap.from('.animate-yearbook-header', {
+                opacity: 0, scale: 0.8, y: 30, duration: 1.2, ease: "power4.out",
+                scrollTrigger: { trigger: '.yearbook-section', start: "top 85%" }
+            });
+
+            gsap.from('.yearbook-grid .council-full-image-card', {
+                opacity: 0, y: 60, scale: 0.95, stagger: 0.15, duration: 1.2, ease: "expo.out",
+                scrollTrigger: { trigger: '.yearbook-grid', start: "top 85%" }
+            });
+
+            // News & Events Animations
+            gsap.from('.animate-events-header', {
+                opacity: 0, x: -50, duration: 1.2, ease: "power4.out",
+                scrollTrigger: { trigger: '#news-events-sec', start: "top 85%" }
+            });
+
+            gsap.from('#news-events-sec .event-anim-element', {
+                opacity: 0, y: 30, stagger: 0.1, duration: 0.8, ease: "power2.out",
+                scrollTrigger: { trigger: '#news-events-sec', start: "top 85%" }
+            });
+
+
 
             // Tab Interactivity
             const tabs = document.querySelectorAll('.campus-tab');

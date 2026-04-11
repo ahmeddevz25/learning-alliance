@@ -328,6 +328,18 @@ body {
         padding-left: 30px;
     }
 
+    .life-intro-section .container,
+    .council-section .container,
+    .yearbook-section .container {
+        padding-left: 35px !important;
+        padding-right: 20px !important;
+    }
+
+    .intro-text-content p {
+        font-size: 1.1rem !important;
+        margin-top: 20px;
+    }
+
     .ui-line-v-content.tricolor {
         left: 12px;
     }
@@ -3087,6 +3099,23 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 991px) {
+    .red-overlap-box {
+        position: relative;
+        bottom: 0;
+        right: auto;
+        width: 100%;
+        min-height: auto;
+        margin-top: 0;
+    }
+
+    .program-full-img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 300px;
+    }
+}
+
 /* STUDENT POLICIES PAGE STYLES */
 .policies-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/studybooks.jpg') !important;
@@ -3265,21 +3294,26 @@ body {
 }
 
 @media (max-width: 991px) {
+    .policies-hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
     .policies-title {
         font-size: 2.8rem !important;
     }
 
     .policy-btn {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         padding: 15px 20px;
         font-size: 1.1rem;
     }
 
     .policy-line-h {
-        top: 100px;
-        width: 90%;
-        left: 5%;
+        display: none !important;
     }
 
     .manual-title {
@@ -3291,8 +3325,13 @@ body {
     }
 
     .manual-yellow-line {
-        left: 15px;
+        left: 12px;
         width: 5px;
+    }
+
+    .policy-manual-section .container {
+        padding-left: 35px !important;
+        padding-right: 20px !important;
     }
 }
 
@@ -3329,6 +3368,148 @@ body {
     z-index: 15;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
+
+.contact-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/contactbg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-line-h {
+    position: absolute;
+    top: 74px;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background-color: #005826;
+    /* Green line */
+    z-index: 10;
+}
+
+.contact-content-box {
+    position: absolute;
+    top: 183px;
+    left: 7.5%;
+    height: 55%;
+    width: 25%;
+    background-color: rgba(186, 42, 47, 0.9);
+    padding: 50px 40px;
+    color: #fff;
+    z-index: 15;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.contact-content-box h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+@media (max-width: 991px) {
+    .contact-content-box {
+        width: 85%;
+        left: 7.5%;
+        top: 200px;
+        height: auto;
+        padding: 40px 30px;
+    }
+
+    .contact-content-box h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-line-h {
+        top: 100px;
+        left: 5%;
+        width: 90%;
+    }
+}
+
+/* Contact Details Section */
+.contact-details-section {
+    padding: 60px 0;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.contact-details-line-y {
+    position: absolute;
+    left: 45px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #fce144;
+}
+
+.contact-details-section .container {
+    padding-left: 100px;
+    padding-right: 60px;
+}
+
+.contact-info-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.contact-info-text strong {
+    font-weight: 700;
+    color: #000;
+    margin-right: 5px;
+}
+
+.campus-large-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-align: right;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.campus-map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+@media (max-width: 991px) {
+    .contact-details-line-y {
+        left: 15px;
+        width: 4px;
+    }
+    
+    .contact-details-section .container {
+        padding-left: 35px;
+        padding-right: 20px;
+    }
+    
+    .campus-large-title {
+        font-size: 2rem;
+        text-align: left;
+        margin-top: 25px;
+    }
+    
+    .contact-info-text {
+        font-size: 1rem;
+    }
+    
+    .campus-map-container {
+        height: 300px;
+    }
+}
+
+
 
 .admissions-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/admissions.jpg') !important;
@@ -3754,7 +3935,7 @@ body {
 .section-watermark {
     font-size: 4rem;
     font-weight: 800;
-    color: rgb(85 76 76 / 32%);
+    color: rgb(12 12 12 / 38%);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 0;
@@ -3864,7 +4045,9 @@ body {
     }
 
     .section-watermark {
-        font-size: 4rem;
+        font-size: clamp(1.8rem, 7vw, 3rem);
+        letter-spacing: 1px;
+        line-height: 1.2;
     }
 
     .docs-list-box {
@@ -4023,13 +4206,153 @@ body {
 }
 
 @media (max-width: 768px) {
-    .council-watermark {
-        font-size: 3rem;
+
+    .council-watermark,
+    .magazine-section h2.fw-bold {
+        font-size: clamp(1.2rem, 6.5vw, 1.8rem) !important;
+        letter-spacing: 1px !important;
+        white-space: nowrap;
     }
 
     .campus-tab {
-        padding: 8px 20px;
-        font-size: 0.9rem;
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .animate-council-tabs {
+        flex-wrap: wrap;
     }
 }
+
+/* --- LIFE AT LA: NEWS & EVENTS SECTION STYLES --- */
+.vertical-news-watermark {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center center;
+    font-size: 65px;
+    font-weight: 800;
+    color: rgb(0 0 0 / 20%);
+    white-space: nowrap;
+    z-index: 5;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-family: 'Outfit', sans-serif;
+}
+
+.yellow-circle-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    background-color: #fbd63b;
+    /* Brand Yellow */
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    font-size: 1.2rem;
+}
+
+.yellow-circle-nav-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.yellow-circle-nav-btn.prev {
+    left: -32px;
+}
+
+.yellow-circle-nav-btn.next {
+    right: -32px;
+}
+
+@media (max-width: 1200px) {
+    .vertical-news-watermark {
+        font-size: 6rem;
+        left: 0px;
+    }
+}
+
+.news-container-responsive {
+    padding-left: 160px;
+}
+
+@media (max-width: 1200px) {
+    .news-container-responsive {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .vertical-news-watermark {
+        display: none;
+        /* Hide on mobile to save space */
+    }
+
+    .yellow-circle-nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .yellow-circle-nav-btn.prev {
+        left: 5px;
+    }
+
+    .yellow-circle-nav-btn.next {
+        right: 5px;
+    }
+}
+
+/* RESPONSIVE FIXES */
+.news-container-responsive {
+    padding-left: 160px;
+}
+
+@media (max-width: 1200px) {
+    .news-container-responsive {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .news-container-responsive {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .vertical-news-watermark {
+        display: block !important;
+        font-size: 3.5rem !important;
+        left: 20px !important;
+        opacity: 0.1 !important;
+        z-index: 0 !important;
+    }
+
+    .yellow-circle-nav-btn {
+        top: 250px !important;
+        /* Centers arrows perfectly over the 500px tall image */
+        transform: translateY(-50%) !important;
+        width: 50px;
+        height: 50px;
+    }
+
+    .yellow-circle-nav-btn.prev {
+        left: 20px !important;
+    }
+
+    .yellow-circle-nav-btn.next {
+        left: auto !important;
+        right: 20px !important;
+    }
 }
