@@ -28,7 +28,7 @@
         <!-- Navbar / Top Header -->
         <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
             <div class="logo">
-                <a href="index.html">
+                <a href="home.html">
                     <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
                 </a>
             </div>
@@ -50,9 +50,11 @@
     </section>
 
     <!-- DHA Campus Section -->
-    <section id="la-dha" class="contact-details-section">
-        <div class="contact-details-line-y"></div>
-        <div class="container" style="max-width: 1400px;">
+    <section id="la-dha" class="contact-details-section position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container position-relative content-shift" style="z-index: 1;">
             <div class="row align-items-start">
                 <div class="col-lg-6">
                     <div class="contact-info-text"><strong>Location:</strong> 32/1, J Block, DHA Phase VIII, Lahore,
@@ -73,9 +75,11 @@
     </section>
 
     <!-- Junior School Section -->
-    <section id="la-junior" class="contact-details-section bg-light">
-        <div class="contact-details-line-y"></div>
-        <div class="container" style="max-width: 1400px;">
+    <section id="la-junior" class="contact-details-section bg-light position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container position-relative content-shift" style="z-index: 1;">
             <div class="row align-items-start">
                 <div class="col-lg-6">
                     <div class="contact-info-text"><strong>Location:</strong> 32/1, J Block, DHA Phase VIII, Lahore,
@@ -96,9 +100,11 @@
     </section>
 
     <!-- Aziz Avenue Section -->
-    <section id="la-aziz" class="contact-details-section">
-        <div class="contact-details-line-y"></div>
-        <div class="container" style="max-width: 1400px;">
+    <section id="la-aziz" class="contact-details-section position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-red h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container position-relative content-shift" style="z-index: 1;">
             <div class="row align-items-start">
                 <div class="col-lg-6">
                     <div class="contact-info-text"><strong>Location:</strong> Aziz Avenue, Canal Bank, Gulberg V,
@@ -119,9 +125,11 @@
     </section>
 
     <!-- Faisalabad Section -->
-    <section id="la-faisalabad" class="contact-details-section bg-light">
-        <div class="contact-details-line-y"></div>
-        <div class="container" style="max-width: 1400px;">
+    <section id="la-faisalabad" class="contact-details-section bg-light position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container position-relative content-shift" style="z-index: 1;">
             <div class="row align-items-start">
                 <div class="col-lg-6">
                     <div class="contact-info-text"><strong>Location:</strong> 12-A Peoples Colony No. 1, Faisalabad,
@@ -145,7 +153,7 @@
     <div id="sideMenu" class="side-menu">
         <button id="closeMenu" class="close-btn">&times;</button>
         <nav class="menu-nav">
-            <a href="index.html" class="menu-header">Learning Alliance</a>
+            <a href="home.html" class="menu-header">Learning Alliance</a>
             <a href="about-us.html">About us</a>
             <a href="programs.html">Programs</a>
             <a href="student-policies.html">Student Policies</a>
@@ -187,7 +195,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
-                            <a href="index.html" class="f-link">Homepage</a>
+                            <a href="home.html" class="f-link">Homepage</a>
                             <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
                             <a href="contact-us.html" class="f-link">Locations</a>
@@ -341,6 +349,7 @@
             }
         });
     </script>
+    <script src="scroll-lines.js"></script>
 </body>
 
 </html>

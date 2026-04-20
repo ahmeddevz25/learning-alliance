@@ -1,70 +1,312 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Learning Alliance Branches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Learning Alliance</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome for Social Icons -->
-    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts for Outfit -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GSAP for Premium Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom CSS -->
+    <!-- Google Fonts Alternative for Euclid (Outfit / Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
     <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Fancybox 5 CSS (Robust Alternative) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
 
-    <!-- Cards Section -->
-    <section class="cards-section">
-        <div class="bg-yellow-stripe"></div>
-        <div class="container container-custom">
-            <div class="row justify-content-center">
+    <section class="hero-section">
+        <!-- UI Geometric Lines -->
+        <div class="ui-line-h"></div>
+        <div class="ui-line-v"></div>
 
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 col-sm-10 mb-4 mb-lg-0 col-card">
-                    <div class="branch-card card-yellow">
-                        <div class="branch-card-header">Lahore Pre-school</div>
-                        <div class="branch-card-img">
-                            <img src="https://learn.fountainhead.pk/wp-content/uploads/2026/01/Mask-group-5.png"
-                                alt="Lahore Pre-school">
-                            <!-- Overlay Visit Button -->
-                            <div class="visit-overlay">
-                                <a href="#" class="visit-btn">Visit now</a>
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/webvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Navbar / Top Header -->
+        <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
+            <div class="logo">
+                <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
+            </div>
+            <div class="menu-btn d-flex flex-column align-items-center">
+                <img src="assets/images/menu-button.jpg" alt="Menu" height="35">
+            </div>
+        </header>
+
+        <!-- Sidebar Icons -->
+        <div class="sidebar-icons">
+            <button id="playPauseBtn" class="v-btn play-btn" aria-label="Play/Pause">
+                <span class="icon"><i class="fa-solid fa-pause"></i></span>
+            </button>
+            <button id="muteBtn" class="v-btn mute-btn" aria-label="Mute/Unmute">
+                <span class="icon"><i class="fa-solid fa-volume-xmark"></i></span>
+            </button>
+        </div>
+
+        <!-- Side Menu -->
+        <div id="sideMenu" class="side-menu">
+            <button id="closeMenu" class="close-btn">&times;</button>
+            <nav class="menu-nav">
+                <a href="index.html" class="menu-header">Learning Alliance</a>
+                <a href="about-us.html">About us</a>
+                <a href="programs.html">Programs</a>
+                <a href="student-policies.html">Student Policies</a>
+                <a href="co-curricular.html">Co Curricular</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="life-at-la.html">Life at LA</a>
+                <a href="contact-us.html">Contact US</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section py-5">
+        <div class="ui-line-v-mission"></div>
+        <div class="container text-center">
+            <div class="brand-images mb-4">
+                <img src="assets/images/learning.png" alt="Learning" class="img-learning">
+                <img src="assets/images/alliance.png" alt="Alliance" class="img-alliance">
+            </div>
+            <div class="mission-text-container mx-auto">
+                <p class="mission-text">
+                    At Learning Alliance, we are dedicated to providing unparalleled educational opportunities,
+                    world-class resources, and a dynamic learning environment that empowers students to become
+                    independent, self-motivated individuals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal Section with Pinning -->
+    <section class="principal-section">
+        <div class="principal-pin-inner w-100">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+                        <div class="principal-image-wrapper">
+                            <img src="assets/images/principle.jpg" alt="Executive Principal"
+                                class="img-fluid principal-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="principal-content ps-lg-5">
+                            <p class="reveal-text highlight-p">
+                                Welcome to the official website of Learning Alliance. We proudly uphold a tradition of
+                                academic excellence and dedicated hard work.
+                            </p>
+                            <p class="reveal-text">
+                                I believe life offers opportunities to each of us, and it is our duty to make the most
+                                of
+                                them and pursue our dreams. In a rapidly changing world, we are committed to meeting
+                                diverse
+                                student needs by offering a wide range of academic programmes, including O’ and A’ Level
+                                Cambridge Assessment International Education, as well as the PYP and MYP of the
+                                International Baccalaureate.
+                            </p>
+                            <div class="principal-signature mt-5">
+                                <h4 class="mb-0 reveal-text">Anjum S. Ahmed</h4>
+                                <p class="text-white-50 reveal-text">Executive Principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- University Placements Section -->
+    <section class="placements-section">
+        <div class="placements-bg">
+            <div class="placements-watermark">university<br>placements</div>
+        </div>
+        <div class="container placements-container py-5">
+            <div class="row g-4 justify-content-center h-100">
+                <!-- Card 1 - Yellow -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="placement-card card-yellow h-100">
+                        <div class="placement-card-top">
+                            <div class="placement-photo-wrap">
+                                <img src="assets/images/student.jpg" alt="Shah Nawaz Haseeb" class="placement-photo">
+                            </div>
+                        </div>
+                        <div class="placement-info">
+                            <h5 class="placement-name">Shah Nawaz Haseeb</h5>
+                            <p class="placement-details">Learning Alliance A level Programme DHA<br>Rochester Institute
+                                of Technology</p>
+                            <div class="placement-badge">Rochester Institute of Technology <span>&gt;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Green -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="placement-card card-green h-100">
+                        <div class="placement-card-top">
+                            <div class="placement-photo-wrap">
+                                <img src="assets/images/student2.jpg" alt="Abdul Muhaymin Ans" class="placement-photo">
+                            </div>
+                        </div>
+                        <div class="placement-info">
+                            <h5 class="placement-name">Abdul Muhaymin Ans</h5>
+                            <p class="placement-details">Learning Alliance A level Programme DHA<br>Rochester Institute
+                                of Technology</p>
+                            <div class="placement-badge">Rochester Institute of Technology <span>&gt;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Pink -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="placement-card card-pink h-100">
+                        <div class="placement-card-top">
+                            <div class="placement-photo-wrap">
+                                <img src="assets/images/student3.jpg" alt="ZAYNA AHSAN" class="placement-photo">
+                            </div>
+                        </div>
+                        <div class="placement-info">
+                            <h5 class="placement-name">ZAYNA AHSAN</h5>
+                            <p class="placement-details">Learning Alliance A level Programme DHA<br>Rochester Institute
+                                of Technology</p>
+                            <div class="placement-badge">Rochester Institute of Technology <span>&gt;</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center h-100" style="margin-top: 100px;">
+                <!-- Card 1 - Yellow -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="placement-card card-yellow h-100">
+                        <div class="placement-card-top">
+                            <div class="placement-photo-wrap">
+                                <img src="assets/images/student.jpg" alt="Shah Nawaz Haseeb" class="placement-photo">
+                            </div>
+                        </div>
+                        <div class="placement-info">
+                            <h5 class="placement-name">Shah Nawaz Haseeb</h5>
+                            <p class="placement-details">Learning Alliance A level Programme DHA<br>Rochester Institute
+                                of Technology</p>
+                            <div class="placement-badge">Rochester Institute of Technology <span>&gt;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Green -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="placement-card card-green h-100">
+                        <div class="placement-card-top">
+                            <div class="placement-photo-wrap">
+                                <img src="assets/images/student2.jpg" alt="Abdul Muhaymin Ans" class="placement-photo">
+                            </div>
+                        </div>
+                        <div class="placement-info">
+                            <h5 class="placement-name">Abdul Muhaymin Ans</h5>
+                            <p class="placement-details">Learning Alliance A level Programme DHA<br>Rochester Institute
+                                of Technology</p>
+                            <div class="placement-badge">Rochester Institute of Technology <span>&gt;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Pink -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="placement-card card-pink h-100">
+                        <div class="placement-card-top">
+                            <div class="placement-photo-wrap">
+                                <img src="assets/images/student3.jpg" alt="ZAYNA AHSAN" class="placement-photo">
+                            </div>
+                        </div>
+                        <div class="placement-info">
+                            <h5 class="placement-name">ZAYNA AHSAN</h5>
+                            <p class="placement-details">Learning Alliance A level Programme DHA<br>Rochester Institute
+                                of Technology</p>
+                            <div class="placement-badge">Rochester Institute of Technology <span>&gt;</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Values Section (Interactive Scroll) -->
+    <section class="values-section" style="height: 350vh;">
+        <div class="values-sticky-wrapper overflow-hidden position-sticky top-0" style="height: 100vh;">
+            <div class="values-watermark" style="z-index: 1;">Our<br><span class="watermark-indent">Values</span></div>
+
+            <div class="position-absolute w-100 z-3" style="top: 15vh; pointer-events: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-4">
+                            <h2 class="values-heading mb-0">Everything we do at Learning Alliance is guided by our
+                                ethos, mission, and vision.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horizontal Track -->
+            <div class="scroll-content d-flex align-items-end"
+                style="width: 300vw; height: 100%; padding-bottom: 10vh; z-index: 2; position: relative;">
+
+                <!-- Slide 1: Ethos -->
+                <div class="values-slide-block d-flex align-items-center" style="width: 100vw;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 offset-lg-1">
+                                <h3 class="ethos-title">Ethos</h3>
+                            </div>
+                            <div class="col-lg-8">
+                                <p class="ethos-text mb-4">At Learning Alliance, we nurture independent learners who
+                                    value responsibility and respect. Beyond academics, we shape confident individuals
+                                    who are ready to lead and make a positive impact.</p>
+                                <a href="#" class="btn-pill-dark">Learn more <span class="arrow">&gt;</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 col-sm-10 mb-4 mb-lg-0 col-card">
-                    <div class="branch-card card-green">
-                        <div class="branch-card-header">Learning Alliance</div>
-                        <div class="branch-card-img">
-                            <img src="https://learn.fountainhead.pk/wp-content/uploads/2026/01/Frame-96.png"
-                                alt="Learning Alliance">
-                            <!-- Overlay Visit Button -->
-                            <div class="visit-overlay">
-                                <a href="index.html" class="visit-btn">Visit
-                                    now</a>
+                <!-- Slide 2: Mission Statement -->
+                <div class="values-slide-block d-flex align-items-center" style="width: 100vw;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 offset-lg-1">
+                                <h3 class="ethos-title">Mission<br>Statement</h3>
+                            </div>
+                            <div class="col-lg-8">
+                                <p class="ethos-text mb-4">LEARNING ALLIANCE is a community that nurtures intellect and
+                                    character in a safe, inclusive environment. We empower students to grow as confident
+                                    learners and inspire them to become responsible, compassionate global citizens.</p>
+                                <a href="#" class="btn-pill-dark">Learn more <span class="arrow">&gt;</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 col-sm-10 mb-4 mb-lg-0 col-card">
-                    <div class="branch-card card-red">
-                        <div class="branch-card-header">LA international</div>
-                        <div class="branch-card-img">
-                            <img src="https://learn.fountainhead.pk/wp-content/uploads/2026/01/Frame-96-1.png"
-                                alt="LA international">
-                            <!-- Overlay Visit Button -->
-                            <div class="visit-overlay">
-                                <a href="#" class="visit-btn">Visit now</a>
+                <!-- Slide 3: Why LA? -->
+                <div class="values-slide-block d-flex align-items-center" style="width: 100vw;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 offset-lg-1">
+                                <h3 class="ethos-title">Why<br>LA?</h3>
+                            </div>
+                            <div class="col-lg-8">
+                                <p class="ethos-text mb-4">At Learning Alliance, we unlock each child’s unique potential
+                                    through academic excellence, holistic growth, and innovative teaching. More than
+                                    just a school, we nurture leaders, creative thinkers, and empathetic individuals.
+                                </p>
+                                <a href="#" class="btn-pill-dark">Learn more <span class="arrow">&gt;</span></a>
                             </div>
                         </div>
                     </div>
@@ -74,36 +316,711 @@
         </div>
     </section>
 
+    <!-- Slider & Event Section -->
+    <section class="slider-events-section py-5 my-5">
+        <div class="container position-relative" style="max-width: 1200px;">
+            <div id="admissionsSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1: Orange Border Theme -->
+                    <div class="carousel-item active">
+                        <div class="row g-0 align-items-stretch"
+                            style="border: 1px solid #d4502d; background-color: #f1f2f2;">
+                            <div class="col-lg-8 border-end"
+                                style="border-right: 1px solid #d4502d !important; position: relative;">
+                                <img src="assets/images/slider1.jpg" class="d-block w-100 h-100"
+                                    style="object-fit: cover; min-height: 500px;" alt="Admissions August 2025">
+                            </div>
+                            <!-- Right Event Card -->
+                            <div class="col-lg-4">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center px-4 px-md-5 py-5 overflow-hidden">
+                                    <span class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 0.85rem; letter-spacing: 1px; color: #111;">EVENT</span>
+                                    <h2 class="event-anim-element fw-bold mb-5"
+                                        style="font-size: 2rem; line-height: 1.2; color: #000;">Admissions
+                                        August<br>2025-2026</h2>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-calendar"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">14 Aug 2025</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-clock"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">18:30 - 21h00</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-start mb-4">
+                                        <span style="width: 25px; display: inline-block;"></span>
+                                        <span style="font-size: 0.95rem; line-height: 1.4; color: #111;">The Other
+                                            House, South Kensington, London</span>
+                                    </div>
+                                    <div class="event-anim-element mt-2 mb-4"><span class="fw-bold"
+                                            style="font-size: 0.85rem; color: #000;">Find out more</span></div>
+                                    <div class="event-anim-element">
+                                        <a href="#"
+                                            class="btn btn-dark rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-between"
+                                            style="min-width: 200px; font-size: 0.95rem;">
+                                            <span>Find out more</span> <span class="ms-3">&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Navy Blue Border Theme -->
+                    <div class="carousel-item">
+                        <div class="row g-0 align-items-stretch"
+                            style="border: 1px solid #1a3c6d; background-color: #f1f2f2;">
+                            <div class="col-lg-8 border-end"
+                                style="border-right: 1px solid #1a3c6d !important; position: relative;">
+                                <img src="assets/images/slider2.jpg" class="d-block w-100 h-100"
+                                    style="object-fit: cover; min-height: 500px;" alt="Admissions August 2025">
+                            </div>
+                            <div class="col-lg-4">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center px-4 px-md-5 py-5 overflow-hidden">
+                                    <span class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 0.85rem; letter-spacing: 1px; color: #111;">EVENT</span>
+                                    <h2 class="event-anim-element fw-bold mb-5"
+                                        style="font-size: 2rem; line-height: 1.2; color: #000;">Admissions
+                                        August<br>2025-2026</h2>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-calendar"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">14 Aug 2025</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-clock"
+                                            style="width: 25px; font-size: 1.1rem; color: #000;"></i>
+                                        <span style="font-size: 0.95rem; color: #111;">18:30 - 21h00</span>
+                                    </div>
+                                    <div class="event-anim-element d-flex align-items-start mb-4">
+                                        <span style="width: 25px; display: inline-block;"></span>
+                                        <span style="font-size: 0.95rem; line-height: 1.4; color: #111;">The Other
+                                            House, South Kensington, London</span>
+                                    </div>
+                                    <div class="event-anim-element mt-2 mb-4"><span class="fw-bold"
+                                            style="font-size: 0.85rem; color: #000;">Find out more</span></div>
+                                    <div class="event-anim-element">
+                                        <a href="#"
+                                            class="btn btn-dark rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-between"
+                                            style="min-width: 200px; font-size: 0.95rem;">
+                                            <span>Find out more</span> <span class="ms-3">&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Red Border Theme (Lorem Ipsum text layout) -->
+                    <div class="carousel-item">
+                        <div class="row g-0 align-items-stretch"
+                            style="border: 1px solid #a62a2a; background-color: #f1f2f2;">
+                            <div class="col-lg-8 border-end"
+                                style="border-right: 1px solid #a62a2a !important; position: relative;">
+                                <img src="assets/images/slider3.jpg" class="d-block w-100 h-100"
+                                    style="object-fit: cover; min-height: 500px;" alt="Lorem Ipsum">
+                            </div>
+                            <div class="col-lg-4">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center px-4 px-md-5 py-5 overflow-hidden">
+                                    <span class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 0.85rem; letter-spacing: 1px; color: #111;">EVENT</span>
+
+                                    <h2 class="event-anim-element fw-bold mb-4"
+                                        style="font-size: 2rem; line-height: 1.2; color: #000;">Lorem<br>Ipsum</h2>
+
+                                    <p class="event-anim-element mb-5"
+                                        style="font-size: 0.95rem; line-height: 1.6; color: #111;">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley
+                                    </p>
+
+                                    <div class="event-anim-element mt-auto mb-4"><span class="fw-bold"
+                                            style="font-size: 0.85rem; color: #000;">Find out more</span></div>
+                                    <div class="event-anim-element">
+                                        <a href="#"
+                                            class="btn btn-dark rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-between"
+                                            style="min-width: 200px; font-size: 0.95rem;">
+                                            <span>Find out more</span> <span class="ms-3">&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Controls Fixed globally above the slides -->
+                <!-- Left arrow dynamically offset protruding outside the box edge -->
+                <button class="custom-slider-btn d-none d-lg-flex" type="button" data-bs-target="#admissionsSlider"
+                    data-bs-slide="prev" style="left: -18px;">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <!-- Right arrow statically clamped explicitly over the 8-col grid divider line -->
+                <button class="custom-slider-btn d-none d-lg-flex" type="button" data-bs-target="#admissionsSlider"
+                    data-bs-slide="next" style="left: calc(66.666667% - 18px); right: auto;">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Fallback Mobile Controls (Positioned normally on edges) -->
+                <button class="custom-slider-btn d-lg-none" type="button" data-bs-target="#admissionsSlider"
+                    data-bs-slide="prev" style="left: 10px;">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="custom-slider-btn d-lg-none" type="button" data-bs-target="#admissionsSlider"
+                    data-bs-slide="next" style="right: 10px; left: auto;">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magazine & Yearbook Section -->
+    <section class="magazine-section py-5 my-5 text-center position-relative">
+        <div class="container" style="max-width: 876px;">
+            <!-- Heading -->
+            <h2 class="fw-bold mb-3" style="color: #9c9c9c; font-size: 2.2rem; letter-spacing: 2px;">MAGAZINE & YEARBOOK
+            </h2>
+            <div class="mx-auto" style="width: 80px; height: 3px; background-color: #a92a31; margin-bottom: 2.5rem;">
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+                <button id="filter-dha" class="magazine-filter btn px-4 py-2"
+                    style="background-color: #fce144; border: 1px solid #fce144; border-radius: 0; font-size: 0.85rem; font-weight: 500; min-width: 120px;">DHA</button>
+                <button class="magazine-filter btn bg-white px-4 py-2"
+                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Aziz
+                    Avenue</button>
+                <button class="magazine-filter btn bg-white px-4 py-2"
+                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Gulberg</button>
+                <button class="magazine-filter btn bg-white px-4 py-2"
+                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Faisalabad</button>
+            </div>
+
+            <!-- Flipbooks Row -->
+            <div class="row pt-4 pb-5 justify-content-center gx-5">
+                <!-- Book 1 (Offset: Red) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine1.pdf"
+                        style="box-shadow: -15px 15px 0px 0px #ac3437; background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/flipbook1.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2022-23">
+                    </div>
+                </div>
+                <!-- Book 2 (Offset: Green) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine2.pdf"
+                        style="box-shadow: -15px 15px 0px 0px #136236; background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/flipbook2.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2024">
+                    </div>
+                </div>
+                <!-- Book 3 (Offset: Yellow) -->
+                <div class="col-md-4 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine3.pdf"
+                        style="box-shadow: -15px 15px 0px 0px #f8cf28; background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/flipbook3.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2025">
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Follow -->
+            <div class="d-flex justify-content-end align-items-center mt-5">
+                <span class="fs-5 me-3" style="font-weight: 500;">Follow us on social media</span>
+                <div class="social-icons d-flex gap-2">
+                    <a href="#"
+                        class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
+                        style="width: 32px; height: 32px; text-decoration: none;">
+                        <i class="fa-brands fa-instagram fs-6"></i>
+                    </a>
+                    <a href="#"
+                        class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
+                        style="width: 32px; height: 32px; text-decoration: none;">
+                        <i class="fa-brands fa-facebook-f fs-6"></i>
+                    </a>
+                    <a href="#"
+                        class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
+                        style="width: 32px; height: 32px; text-decoration: none;">
+                        <i class="fa-brands fa-linkedin-in fs-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Structural left frame line -->
+        <div class="position-absolute d-none d-md-block"
+            style="left: 45px; top: -50px; bottom: -50px; width: 3px; background-color: #a92a31;"></div>
+    </section>
+
+
+
+    <!-- Explore Section -->
+    <section class="explore-section py-5 my-5 position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left: Heading -->
+                <div class="col-lg-5 position-relative">
+                    <div class="explore-heading-wrapper" style="position: relative; z-index: 2;">
+                        <h2 class="fw-bold mb-0" style="font-size: 4rem; line-height: 1; color: #000;">DIVE IN</h2>
+                        <div class="d-flex align-items-end">
+                            <span class="fw-bold"
+                                style="font-size: 8rem; color: #b9b9b9; line-height: 0.8; margin-right: 15px;">&</span>
+                            <div style="flex-grow: 1;">
+                                <h2 class="fw-bold mb-0" style="font-size: 4.5rem; line-height: 1; color: #000;">EXPLORE
+                                </h2>
+                                <div style="width: 100%; height: 3px; background-color: #a92a31; margin-top: 15px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Campus Filters -->
+                <div class="col-lg-7">
+                    <div class="d-flex justify-content-end gap-3 flex-wrap">
+                        <button class="btn explore-tab-btn btn-light px-4 py-2"
+                            style="background-color: #f1f2f2; border: none; border-radius: 4px; font-size: 0.85rem; font-weight: 500; min-width: 110px;">DHA</button>
+                        <button class="btn explore-tab-btn btn-light px-4 py-2"
+                            style="background-color: #f1f2f2; border: none; border-radius: 4px; font-size: 0.85rem; font-weight: 500; min-width: 110px;">Aziz
+                            Avenue</button>
+                        <button class="btn explore-tab-btn px-4 py-2"
+                            style="background-color: #fce144; border: none; border-radius: 4px; font-size: 0.85rem; font-weight: 500; min-width: 110px;">Gulberg</button>
+                        <button class="btn explore-tab-btn btn-light px-4 py-2"
+                            style="background-color: #f1f2f2; border: none; border-radius: 4px; font-size: 0.85rem; font-weight: 500; min-width: 110px;">Faisalabad</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Images Row -->
+            <!-- Spaced Images Grid (Reference 1 Style) -->
+            <div class="row pt-5 g-4 px-2">
+                <!-- Reading Weeks -->
+                <div class="col-md-6">
+                    <div class="explore-item explore-gallery-trigger position-relative overflow-hidden"
+                        data-gallery="reading" style="border-radius: 0; cursor: pointer;">
+                        <img src="assets/images/Reading.jpg" class="img-fluid w-100 gallery-img"
+                            style="object-fit: cover; height: 450px;" alt="Reading Weeks">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 gallery-overlay"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 class="fw-bold mb-0" style="color: #fff; font-size: 2.8rem; letter-spacing: 1px;">
+                                Reading Weeks</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Music & Drama -->
+                <div class="col-md-6">
+                    <div class="explore-item explore-gallery-trigger position-relative overflow-hidden"
+                        data-gallery="music" style="border-radius: 0; cursor: pointer;">
+                        <img src="assets/images/music.jpg" class="img-fluid w-100 gallery-img"
+                            style="object-fit: cover; height: 450px;" alt="Music & Drama">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 gallery-overlay"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 class="fw-bold mb-0" style="color: #fff; font-size: 2.8rem; letter-spacing: 1px;">Music
+                                & Drama</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4 g-4 px-2">
+                <!-- Art Fest -->
+                <div class="col-md-6">
+                    <div class="explore-item explore-gallery-trigger position-relative overflow-hidden"
+                        data-gallery="art" style="border-radius: 0; cursor: pointer;">
+                        <img src="assets/images/group.jpg" class="img-fluid w-100 gallery-img"
+                            style="object-fit: cover; height: 450px;" alt="Art Fest">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 gallery-overlay"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 class="fw-bold mb-0" style="color: #fff; font-size: 2.8rem; letter-spacing: 1px;">Art
+                                Fest</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Science Fair -->
+                <div class="col-md-6">
+                    <div class="explore-item explore-gallery-trigger position-relative overflow-hidden"
+                        data-gallery="science" style="border-radius: 0; cursor: pointer;">
+                        <img src="assets/images/science.jpg" class="img-fluid w-100 gallery-img"
+                            style="object-fit: cover; height: 450px;" alt="Science Fair">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 gallery-overlay"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 class="fw-bold mb-0" style="color: #fff; font-size: 2.8rem; letter-spacing: 1px;">
+                                Science Fair</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4 g-4 px-2">
+                <!-- After School Clubs -->
+                <div class="col-md-6">
+                    <div class="explore-item explore-gallery-trigger position-relative overflow-hidden"
+                        data-gallery="clubs" style="border-radius: 0; cursor: pointer;">
+                        <img src="assets/images/after.jpg" class="img-fluid w-100 gallery-img"
+                            style="object-fit: cover; height: 450px;" alt="After School Clubs">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 gallery-overlay"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 class="fw-bold mb-0" style="color: #fff; font-size: 2.8rem; letter-spacing: 1px;">After
+                                School Clubs</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trips -->
+                <div class="col-md-6">
+                    <div class="explore-item explore-gallery-trigger position-relative overflow-hidden"
+                        data-gallery="trips" style="border-radius: 0; cursor: pointer;">
+                        <img src="assets/images/trip.jpg" class="img-fluid w-100 gallery-img"
+                            style="object-fit: cover; height: 450px;" alt="Trips">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 gallery-overlay"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 class="fw-bold mb-0" style="color: #fff; font-size: 2.8rem; letter-spacing: 1px;">Trips
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Structural left frame line -->
+        <div class="position-absolute d-none d-md-block"
+            style="left: 45px; top: 0; bottom: 0; width: 3px; background-color: #0b5e32;"></div>
+    </section>
+
+    <!-- Our Faculty Section -->
+    <section class="faculty-section faculty-anim py-3 my-1 position-relative overflow-hidden">
+        <div class="container text-center">
+            <!-- Section Header -->
+            <h2 class="fw-bold mb-0 text-uppercase" style="font-size: 2.5rem; color: #b9b9b9; line-height: 0.8;">Our
+                Faculty</h2>
+            <div style="width: 60px; height: 3px; background-color: #a92a31; margin: 10px auto 15px;"></div>
+
+            <div class="mission-text-container mx-auto mb-3">
+                <p class="fs-6" style="color: #333; max-width: 800px; margin: 0 auto; line-height: 1.3;">
+                    At Learning Alliance, we nurture independent learners who value responsibility and respect.
+                    Beyond academics, we shape confident individuals who are ready to lead and make a positive impact.
+                </p>
+            </div>
+
+            <!-- Campus Filters -->
+            <div class="d-flex justify-content-center gap-2 mb-3 flex-wrap">
+                <button class="btn campus-filter-btn px-3 py-1 active"
+                    style="background-color: #fce144; border: none; border-radius: 4px; font-size: 0.75rem; font-weight: 500; min-width: 90px;">DHA</button>
+                <button class="btn campus-filter-btn btn-light px-3 py-1"
+                    style="background-color: #f1f2f2; border: none; border-radius: 4px; font-size: 0.75rem; font-weight: 500; min-width: 90px;">Aziz
+                    Avenue</button>
+                <button class="btn campus-filter-btn btn-light px-3 py-1"
+                    style="background-color: #f1f2f2; border: none; border-radius: 4px; font-size: 0.75rem; font-weight: 500; min-width: 90px;">Gulberg</button>
+                <button class="btn campus-filter-btn btn-light px-3 py-1"
+                    style="background-color: #f1f2f2; border: none; border-radius: 4px; font-size: 0.75rem; font-weight: 500; min-width: 90px;">Faisalabad</button>
+            </div>
+
+            <!-- Faculty Slider -->
+            <div class="position-relative px-md-5">
+                <div class="swiper facultySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Faculty member 1 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Sociology.jpg" class="img-fluid w-100"
+                                            alt="Tehreem Humayun">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Tehreem Humayun</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">GP, SOCIOLOGY</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 2 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Samina.jpg" class="img-fluid w-100" alt="Samina Waseem">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Samina Waseem</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">URDU</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 3 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Sadaf-Nasir.jpg" class="img-fluid w-100"
+                                            alt="Sadaf Nasir">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Sadaf Nasir</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">ART & DESIGN</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 4 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Mr-Sheraz-Siddqui.jpg" class="img-fluid w-100"
+                                            alt="Mr Sheraz Siddqui">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Mr Sheraz Siddqui</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">ACCOUNTING TEACHER</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 5 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Ms.-Arooj-Gulrez.jpg" class="img-fluid w-100"
+                                            alt="Ms. Arooj Gulrez">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Ms. Arooj Gulrez</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">ADMINISTRATOR A LEVEL
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 6 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Ms-Ayesha-Mohsin.jpg" class="img-fluid w-100"
+                                            alt="Ms Ayesha Mohsin">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Ms Ayesha Mohsin</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">SENIOR VICE PRINCIPAL -
+                                            A LEVEL</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 7 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Sajjad.jpg" class="img-fluid w-100" alt="Sajjad Ahmad">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Sajjad Ahmad</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">IT DEPARTMENT</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 8 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Gulzain.jpg" class="img-fluid w-100"
+                                            alt="Gulzain Ahmed">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Gulzain Ahmed</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">MATHEMATICS</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faculty member 9 -->
+                        <div class="swiper-slide faculty-card">
+                            <div class="faculty-card-inner">
+                                <div class="faculty-card-front">
+                                    <div class="card-img-wrapper">
+                                        <img src="assets/images/Maryam.jpg" class="img-fluid w-100" alt="Maryam Khan">
+                                    </div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold mb-1">Maryam Khan</h5>
+                                        <p class="small text-danger mb-0 text-uppercase fw-bold">BIOLOGY</p>
+                                    </div>
+                                </div>
+                                <div class="faculty-card-back">
+                                    <div class="quote-content">
+                                        <p>"Learning Alliance provides such a nurturing and inspiring environment where
+                                            every student feels valued and encouraged to discover their strengths..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Navigation -->
+                <div class="faculty-nav-prev faculty-nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="faculty-nav-next faculty-nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+
+        <!-- Structural Emerald Green Line continuation -->
+        <div class="position-absolute d-none d-md-block"
+            style="left: 45px; top: 0; bottom: 0; width: 3px; background-color: #0b5e32; z-index: 10;"></div>
+    </section>
+
+    <!-- Our Collaborations Section -->
+    <section class="collaborations-section py-4 my-2 position-relative overflow-hidden">
+        <div class="container text-center">
+            <!-- Section Header -->
+            <h2 class="fw-bold mb-0 text-uppercase" style="font-size: 2.5rem; color: #b9b9b9; line-height: 0.8;">Our
+                Collaborations</h2>
+            <div style="width: 60px; height: 3px; background-color: #a92a31; margin: 10px auto 40px;"></div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Collab 1 -->
+                <div class="col-6 col-md-3">
+                    <div class="collab-card">
+                        <div class="collab-badge">Academic Quests</div>
+                        <div class="collab-logo-box">
+                            <img src="assets/images/academic.jpg" class="img-fluid" alt="Academic Quests">
+                        </div>
+                    </div>
+                </div>
+                <!-- Collab 2 -->
+                <div class="col-6 col-md-3">
+                    <div class="collab-card">
+                        <div class="collab-badge">TWK Football Club</div>
+                        <div class="collab-logo-box">
+                            <img src="assets/images/Twklog.jpg" class="img-fluid" alt="TWK Football Club">
+                        </div>
+                    </div>
+                </div>
+                <!-- Collab 3 -->
+                <div class="col-6 col-md-3">
+                    <div class="collab-card">
+                        <div class="collab-badge">Eye on Ivy</div>
+                        <div class="collab-logo-box">
+                            <img src="assets/images/ivy.jpg" class="img-fluid" alt="Eye on Ivy">
+                        </div>
+                    </div>
+                </div>
+                <!-- Collab 4 -->
+                <div class="col-6 col-md-3">
+                    <div class="collab-card">
+                        <div class="collab-badge">The Stem Lab Pakistan</div>
+                        <div class="collab-logo-box">
+                            <img src="assets/images/Stem-lab.jpg" class="img-fluid" alt="The Stem Lab">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer Section -->
     <footer class="site-footer">
         <div class="container container-custom">
             <div class="row">
-                <!-- Left Column -->
+
+                <!-- Left Column (Branding & Vertical Lines) -->
                 <div class="col-lg-5 col-md-12">
                     <div class="v-line f-animate-line" style="height: 50px; margin-bottom: 20px;"></div>
                     <div class="f-box f-red f-animate-box" style="transition-delay: 0.2s;">Where</div>
                     <div class="f-box f-yellow f-animate-box" style="transition-delay: 0.4s;">Potential becomes</div>
                     <div class="f-box f-white f-animate-box" style="transition-delay: 0.6s;">Achievement</div>
+
                     <img src="https://learn.fountainhead.pk/wp-content/uploads/2025/10/la.png"
                         class="footer-logo f-animate-logo" alt="Logo" style="transition-delay: 0.8s;">
                 </div>
+
                 <!-- Right Columns -->
                 <div class="col-lg-7 col-md-12">
                     <div class="row">
+                        <!-- Center-Left Column -->
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Get in touch</h5>
                             <div class="f-text">Learning Alliance</div>
                             <div class="f-text">32/1- J Block, DHA Phase Viii,</div>
                             <div class="f-text">Lahore</div>
-                            <div class="mt-4 mb-2"><a href="mailto:info@learningalliance.com"
-                                    class="f-link mb-1">info@learningalliance.com</a></div>
-                            <div><a href="tel:042111666633" class="f-link">(042) 111 666 633</a></div>
+                            <div class="mt-4 mb-2">
+                                <a href="mailto:info@learningalliance.com"
+                                    class="f-link mb-1">info@learningalliance.com</a>
+                            </div>
+                            <div>
+                                <a href="tel:042111666633" class="f-link">(042) 111 666 633</a>
+                            </div>
+
                             <div class="social-icons">
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
+
+                        <!-- Center-Right Column -->
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
                             <a href="index.html" class="f-link">Homepage</a>
@@ -111,6 +1028,8 @@
                             <a href="about-us.html" class="f-link">About</a>
                             <a href="contact-us.html" class="f-link">Locations</a>
                         </div>
+
+                        <!-- Right Column -->
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Contact us</h5>
                             <a href="admissions.html" class="f-link">Admissions</a>
@@ -119,8 +1038,10 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            <!-- Footer Bottom -->
+
+            <!-- Footer Bottom Content -->
             <div class="row mt-4">
                 <div class="col-12 d-flex flex-column">
                     <div class="v-line f-animate-line"
@@ -129,7 +1050,8 @@
                         <div class="copyright f-animate-fade" style="transition-delay: 1.2s;">© Learning Alliance 2025
                         </div>
                         <div class="developer-text ms-auto f-animate-fade"
-                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning Alliance</span></div>
+                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning
+                                Alliance</span></div>
                     </div>
                     <div class="v-line f-animate-line" style="height: 50px; margin-top: 20px; transition-delay: 1.4s;">
                     </div>
@@ -137,18 +1059,8 @@
             </div>
         </div>
     </footer>
-
-    <button id="topBtn" class="btn btn-dark rounded-circle position-fixed"
-        style="bottom: 30px; right: 30px; width: 50px; height: 50px; z-index: 10000; display: none; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.1);">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <!-- Scripts -->
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-
     <!-- Footer Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -164,11 +1076,327 @@
             document.querySelectorAll('.f-animate-line, .f-animate-box, .f-animate-logo, .f-animate-fade').forEach(el => {
                 observer.observe(el);
             });
+        });
+    </script>
+    <!-- External Scripts from Original Setup -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
 
-            // BACK TO TOP LOGIC (Using GSAP ScrollTrigger for reliability)
+    <!-- Bootstrap JS and custom script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hybrid Engine: Uses CSS native sticky for pinning and purely uses GSAP for timeline scrubbing!
+            if (window.gsap && window.ScrollTrigger) {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const container = document.querySelector(".scroll-content");
+                const section = document.querySelector(".values-section");
+
+                if (container && section && window.innerWidth > 991) {
+                    gsap.to(container, {
+                        x: () => -(container.scrollWidth - window.innerWidth),
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top top",
+                            end: "bottom bottom",  // Smoothly correlates scrub over exact explicit 350vh heights
+                            scrub: 1,
+                            invalidateOnRefresh: true
+                            // Omitted pin: true to allow bug-free CSS native sticky!
+                        }
+                    });
+                } else if (section && window.innerWidth <= 991) {
+                    // MOBILE REVEAL ANIMATIONS (Alternating Left/Right)
+                    const slides = document.querySelectorAll('.values-slide-block');
+
+                    slides.forEach((slide, index) => {
+                        const title = slide.querySelector('.ethos-title');
+                        const text = slide.querySelector('.ethos-text');
+                        const btn = slide.querySelector('.btn-pill-dark');
+
+                        // Alternate directions: Index 0 (Left), Index 1 (Right), etc.
+                        const dir = (index % 2 === 0) ? -60 : 60;
+
+                        gsap.from(title, {
+                            opacity: 0,
+                            x: dir,
+                            duration: 1,
+                            scrollTrigger: {
+                                trigger: slide,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        });
+
+                        gsap.from([text, btn], {
+                            opacity: 0,
+                            x: -dir,
+                            duration: 1,
+                            delay: 0.2,
+                            scrollTrigger: {
+                                trigger: slide,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        });
+                    });
+
+                    // Also animate the top heading independently
+                    gsap.from('.values-heading', {
+                        opacity: 0,
+                        y: 30,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: '.values-heading',
+                            start: "top 90%",
+                            toggleActions: "play none none none"
+                        }
+                    });
+                }
+            }
+
+            const video = document.querySelector('.hero-video');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const muteBtn = document.getElementById('muteBtn');
+            const playPauseIcon = playPauseBtn.querySelector('.icon');
+            const muteIcon = muteBtn.querySelector('.icon');
+
+            playPauseBtn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playPauseIcon.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                } else {
+                    video.pause();
+                    playPauseIcon.innerHTML = '<i class="fa-solid fa-play"></i>';
+                }
+            });
+
+            muteBtn.addEventListener('click', () => {
+                video.muted = !video.muted;
+                muteIcon.innerHTML = video.muted ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>';
+            });
+
+            // Menu Toggle Logic
+            const menuBtn = document.querySelector('.menu-btn');
+            const sideMenu = document.getElementById('sideMenu');
+            const closeMenu = document.getElementById('closeMenu');
+
+            menuBtn.addEventListener('click', () => {
+                sideMenu.classList.add('active');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                sideMenu.classList.remove('active');
+            });
+
+            // Intersection Observer for Animations (Multiple Sections)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-mission');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Placement Cards Entrance Animation (Staggered)
+            const placementObserver = new IntersectionObserver((entries, obs) => {
+                let delay = 0;
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, delay * 150); // 150ms stagger
+                        delay++;
+                        obs.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            const placementCards = document.querySelectorAll('.placement-card');
+            placementCards.forEach(card => placementObserver.observe(card));
+
+            // Mission Section
+            const missionSection = document.querySelector('.mission-section');
+            if (missionSection) observer.observe(missionSection);
+
+            // Faculty Section Animation trigger
+            const facultySection = document.querySelector('.faculty-section');
+            if (facultySection) observer.observe(facultySection);
+
+            // Collaborations Section Animation trigger
+            const collabSection = document.querySelector('.collaborations-section');
+            if (collabSection) observer.observe(collabSection);
+
+            // PRINCIPAL TEXT REVEAL LOGIC
+            const revealContainer = document.querySelector('.principal-content');
+            if (revealContainer) {
+                const revealPs = revealContainer.querySelectorAll('.reveal-text');
+                revealPs.forEach(p => {
+                    const words = p.innerText.split(' ');
+                    p.innerHTML = words.map(word => `<span>${word}</span>`).join(' ');
+                });
+
+                gsap.registerPlugin(ScrollTrigger);
+                const words = document.querySelectorAll('.reveal-text span');
+                gsap.to(words, {
+                    color: "#ffffff",
+                    opacity: 1,
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".principal-section",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: true,
+                    }
+                });
+            }
+            // GSAP ANIMATION FOR ADMISSIONS SLIDER EVENT CARDS
+            const eventSlider = document.getElementById('admissionsSlider');
+            if (eventSlider) {
+                const animateSlideContent = (slide) => {
+                    const textElements = slide.querySelectorAll('.event-anim-element');
+                    if (textElements.length > 0) {
+                        gsap.fromTo(textElements,
+                            { opacity: 0, y: 30 },
+                            { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power3.out", delay: 0.2 }
+                        );
+                    }
+                };
+
+                // Animate initial active slide right away
+                const initialSlide = eventSlider.querySelector('.carousel-item.active');
+                if (initialSlide) {
+                    animateSlideContent(initialSlide);
+                }
+
+                // Pre-hide elements BEFORE the slide completely transitions in to avoid flash
+                eventSlider.addEventListener('slide.bs.carousel', function (e) {
+                    const incomingElements = e.relatedTarget.querySelectorAll('.event-anim-element');
+                    gsap.set(incomingElements, { opacity: 0, y: 30 });
+                });
+
+                // Trigger staggered reveal exactly when the sliding transition finishes locking into place
+                eventSlider.addEventListener('slid.bs.carousel', function (e) {
+                    animateSlideContent(e.relatedTarget);
+                });
+
+                // GSAP ANIMATION FOR MAGAZINE FLIPBOOKS (Zoom In Effect)
+                const flipbooks = document.querySelectorAll('.flipbook-anim');
+                if (flipbooks.length > 0) {
+                    // Set initial state: visible but ready to animate
+                    gsap.set(flipbooks, { zIndex: 10, scale: 1, opacity: 1 });
+
+                    gsap.from(flipbooks, {
+                        scale: 0.85,
+                        opacity: 0,
+                        duration: 1,
+                        stagger: 0.15,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: ".magazine-section",
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    });
+
+                    // Filter Clicks - Unified Grid State
+                    const filterBtns = document.querySelectorAll('.magazine-filter');
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', function () {
+                            const tl = gsap.timeline();
+                            // Briefly fade/scale slightly for movement feel, then return to exact 1:1 same size
+                            tl.to(flipbooks, { opacity: 0, scale: 0.9, duration: 0.2 })
+                                .set(flipbooks, { scale: 1, zIndex: 10, x: 0 })
+                                .to(flipbooks, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.05, ease: "power2.out" });
+                        });
+                    });
+                }
+            }
+
+            // Initialize Faculty Swiper
+            if (document.querySelector('.facultySwiper')) {
+                const facultySwiper = new Swiper('.facultySwiper', {
+                    slidesPerView: 1.2, // Show a peek of next slide for mobile
+                    centeredSlides: true,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    observer: true,
+                    observeParents: true,
+                    navigation: {
+                        nextEl: '.faculty-nav-next',
+                        prevEl: '.faculty-nav-prev',
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            centeredSlides: false,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            centeredSlides: false,
+                            spaceBetween: 30,
+                        },
+                    }
+                });
+
+                // Campus Filter Interactivity Logic (Faculty Section)
+                const facultyCampusBtns = document.querySelectorAll('.campus-filter-btn');
+                facultyCampusBtns.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        // Reset all buttons in this section
+                        facultyCampusBtns.forEach(b => {
+                            b.style.backgroundColor = '#f1f2f2';
+                            b.classList.remove('active');
+                        });
+                        // Active state
+                        this.style.backgroundColor = '#fce144';
+                        this.classList.add('active');
+
+                        // Refresh/Animate the slider
+                        gsap.fromTo('.facultySwiper',
+                            { opacity: 0, x: 20 },
+                            { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
+                        );
+
+                        // Restart autoplay on change if needed
+                        facultySwiper.autoplay.start();
+                    });
+                });
+            }
+
+            // Campus Filter Interactivity Logic (Explore Section)
+            const exploreTabBtns = document.querySelectorAll('.explore-tab-btn');
+            const exploreBlocks = document.querySelectorAll('.explore-item');
+
+            exploreTabBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Reset all buttons in this section
+                    exploreTabBtns.forEach(b => b.style.backgroundColor = '#f1f2f2');
+                    // Active state
+                    this.style.backgroundColor = '#fce144';
+
+                    // Animate the gallery refresh
+                    if (window.gsap) {
+                        gsap.fromTo(exploreBlocks,
+                            { opacity: 0, scale: 0.95, y: 10 },
+                            { opacity: 1, scale: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power2.out" }
+                        );
+                    }
+                });
+            });
+
+            // REWORKED BACK TO TOP (Using GSAP ScrollTrigger for reliability)
             const topBtn = document.getElementById('topBtn');
             if (topBtn && window.gsap && window.ScrollTrigger) {
-                gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
                 gsap.set(topBtn, { opacity: 0, y: 50, display: 'none' });
 
                 ScrollTrigger.create({
@@ -195,6 +1423,140 @@
             }
         });
     </script>
+    <button id="topBtn" class="btn btn-dark rounded-circle position-fixed"
+        style="bottom: 30px; right: 30px; width: 50px; height: 50px; z-index: 10000; display: none; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.1);">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- 3D FlipBook Modal Structure -->
+    <div class="fb3d-modal">
+        <span class="cmd-close fas fa-times"></span>
+        <div class="mount-container"></div>
+    </div>
+
+    <!-- Fancybox 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery Data Configuration
+            const galleries = {
+                reading: [
+                    { src: "assets/images/Reading.jpg", caption: "Reading Weeks" },
+                    { src: "assets/images/Reading.jpg", caption: "Reading Weeks" },
+                    { src: "assets/images/Reading.jpg", caption: "Reading Weeks" },
+                    { src: "assets/images/Reading.jpg", caption: "Reading Weeks" }
+                ],
+                music: [
+                    { src: "assets/images/music.jpg", caption: "Music & Drama" },
+                    { src: "assets/images/music.jpg", caption: "Music & Drama" },
+                    { src: "assets/images/music.jpg", caption: "Music & Drama" }
+                ],
+                art: [
+                    { src: "assets/images/group.jpg", caption: "Art Fest" },
+                    { src: "assets/images/group.jpg", caption: "Art Fest" }
+                ],
+                science: [
+                    { src: "assets/images/science.jpg", caption: "Science Fair" },
+                    { src: "assets/images/science.jpg", caption: "Science Fair" }
+                ],
+                clubs: [
+                    { src: "assets/images/after.jpg", caption: "After School Clubs" },
+                    { src: "assets/images/after.jpg", caption: "After School Clubs" }
+                ],
+                trips: [
+                    { src: "assets/images/trip.jpg", caption: "Trips" },
+                    { src: "assets/images/trip.jpg", caption: "Trips" }
+                ]
+            };
+
+            document.querySelectorAll('.explore-gallery-trigger').forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const type = this.getAttribute('data-gallery');
+                    const items = galleries[type];
+                    
+                    if (items) {
+                        Fancybox.show(items, {
+                            dragToClose: false,
+                            Toolbar: {
+                                display: {
+                                    left: ["infobar"],
+                                    middle: [],
+                                    right: ["iterateZoom", "slideshow", "fullscreen", "download", "thumbs", "close"],
+                                },
+                            },
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="assets/3d-flip-book/js/libs/three.min.js"></script>
+    <script src="assets/3d-flip-book/js/libs/pdf.min.js"></script>
+    <script>
+        // Set PDF.js Worker before plugin
+        window.FLIPBOOK_ASSETS_BASE = 'assets/3d-flip-book/';
+        window.PDFJS_LOCALE = {
+            pdfJsWorker: window.FLIPBOOK_ASSETS_BASE + 'js/libs/pdf.worker.js',
+            pdfJsCMapUrl: 'https://cdn.3dflipbook.net/cmaps'
+        };
+    </script>
+    <script src="assets/3d-flip-book/js/dist/3dflipbook.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var modal = $('.fb3d-modal');
+            var container = $('.fb3d-modal .mount-container');
+            var instance = { scene: undefined };
+
+            // Template Config (Strictly follow folder structure)
+            var fbTemplate = {
+                html: window.FLIPBOOK_ASSETS_BASE + 'templates/default-book-view.html',
+                styles: [window.FLIPBOOK_ASSETS_BASE + 'css/short-white-book-view.css'],
+                links: [{ rel: 'stylesheet', href: window.FLIPBOOK_ASSETS_BASE + 'css/font-awesome.min.css' }],
+                script: window.FLIPBOOK_ASSETS_BASE + 'js/libs/default-book-view.js',
+                sounds: {
+                    startFlip: window.FLIPBOOK_ASSETS_BASE + 'sounds/start-flip.mp3',
+                    endFlip: window.FLIPBOOK_ASSETS_BASE + 'sounds/end-flip.mp3'
+                }
+            };
+
+            // Trigger click
+            $('.flipbook-trigger').on('click', function (e) {
+                e.preventDefault();
+                var pdfUrl = $(this).data('pdf');
+                if (!pdfUrl) return;
+
+                modal.addClass('visible');
+                setTimeout(function () {
+                    try {
+                        container.empty();
+                        instance.scene = container.FlipBook({
+                            pdf: pdfUrl,
+                            template: fbTemplate,
+                            assets: { base: window.FLIPBOOK_ASSETS_BASE }
+                        });
+                    } catch (err) {
+                        console.error("FlipBook modal init error:", err);
+                    }
+                }, 100);
+            });
+
+            // Close logic
+            $('.cmd-close').on('click', function () {
+                modal.removeClass('visible');
+                setTimeout(function () {
+                    container.empty();
+                    if (instance.scene) instance.scene = undefined;
+                }, 500);
+            });
+        });
+    </script>
+
 </body>
 
 </html>

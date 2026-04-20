@@ -25,12 +25,11 @@
     <section class="hero-section programs-hero">
         <!-- UI Geometric Lines -->
         <div class="ui-line-h programs-line-h"></div>
-        <div class="ui-line-v about-line-v" style="display: none;"></div>
 
         <!-- Navbar / Top Header -->
         <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
             <div class="logo">
-                <a href="index.html">
+                <a href="home.html">
                     <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
                 </a>
             </div>
@@ -59,7 +58,7 @@
         <div id="sideMenu" class="side-menu">
             <button id="closeMenu" class="close-btn">&times;</button>
             <nav class="menu-nav">
-                <a href="index.html" class="menu-header">Learning Alliance</a>
+                <a href="home.html" class="menu-header">Learning Alliance</a>
                 <a href="about-us.html">About us</a>
                 <a href="programs.html" class="active">Programs</a>
                 <a href="student-policies.html">Student Policies</a>
@@ -71,8 +70,11 @@
         </div>
     </section>
 
-    <section id="junior-middle-sec" class="programs-detail-section py-5">
-        <div class="container py-lg-5">
+    <section id="junior-middle-sec" class="programs-detail-section py-5 position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
             <!-- Part 1: Image and Action Buttons -->
             <div class="row g-0 align-items-stretch mb-0 mb-lg-0">
                 <div class="col-lg-6">
@@ -117,8 +119,11 @@
         </div>
     </section>
 
-    <section id="o-level-sec" class="programs-detail-section green-line-section o-level-section bg-white">
-        <div class="container py-lg-5">
+    <section id="o-level-sec" class="programs-detail-section green-line-section o-level-section bg-white position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
             <!-- Top: Reduced Width Image -->
             <div class="row g-0 mb-5">
                 <div class="col-lg-8">
@@ -166,8 +171,11 @@
         </div>
     </section>
 
-    <section id="a-level-sec" class="programs-detail-section a-level-section py-5 bg-white">
-        <div class="container py-lg-5">
+    <section id="a-level-sec" class="programs-detail-section red-line-section a-level-section py-5 bg-white position-relative">
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-red h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
             <div class="row g-0 position-relative align-items-stretch">
                 <!-- Left: Image -->
                 <div class="col-lg-6">
@@ -228,7 +236,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
-                            <a href="index.html" class="f-link">Homepage</a>
+                            <a href="home.html" class="f-link">Homepage</a>
                             <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
                             <a href="contact-us.html" class="f-link">Locations</a>
@@ -323,11 +331,12 @@
                     {
                         "--line-scale": 1,
                         duration: 2,
-                        ease: "power4.inOut",
+                        ease: "none",
                         scrollTrigger: {
                             trigger: section,
-                            start: "top 80%",
-                            toggleActions: "play none none none"
+                            start: "top center",
+                            end: "bottom center",
+                            scrub: true
                         }
                     }
                 );

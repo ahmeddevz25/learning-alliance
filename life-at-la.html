@@ -28,7 +28,7 @@
         <!-- Navbar / Top Header -->
         <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
             <div class="logo">
-                <a href="index.html">
+                <a href="home.html">
                     <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
                 </a>
             </div>
@@ -70,7 +70,7 @@
         <div id="sideMenu" class="side-menu">
             <button id="closeMenu" class="close-btn">&times;</button>
             <nav class="menu-nav">
-                <a href="index.html" class="menu-header">Learning Alliance</a>
+                <a href="home.html" class="menu-header">Learning Alliance</a>
                 <a href="about-us.html">About us</a>
                 <a href="programs.html">Programs</a>
                 <a href="student-policies.html" class="active">Student Policies</a>
@@ -81,13 +81,14 @@
             </nav>
         </div>
     </section>
+    <section id="life-intro-sec"
+        class="life-intro-section py-5 position-relative overflow-hidden">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
 
-
-    <section id="life-intro-sec" class="life-intro-section py-5 position-relative overflow-hidden">
-        <!-- UI Structural Lines -->
-        <div class="ui-line-v-content tricolor"></div>
-
-        <div class="container" style="max-width: 1400px;">
+        <div class="container position-relative content-shift" style="z-index: 1;">
             <div class="row align-items-center g-5 justify-content-center">
                 <!-- Left: Image -->
                 <div class="col-lg-6 animate-intro-img text-center">
@@ -120,9 +121,11 @@
 
     <!-- Student Council Section -->
     <section class="council-section position-relative bg-white" id="student-council-sec">
-        <div class="ui-line-v-content tricolor"></div>
-
-        <div class="container py-lg-5">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
             <!-- Section Header -->
             <div class="text-center mb-5 animate-council-header">
                 <h2 class="council-watermark">STUDENT COUNCIL</h2>
@@ -179,10 +182,13 @@
         </div>
     </section>
     <!-- Magazine & Yearbook Section -->
-    <section class="yearbook-section position-relative bg-light" id="magazine-yearbook-sec" style="padding: 80px 0;">
-        <div class="ui-line-v-content tricolor"></div>
-
-        <div class="container py-lg-4">
+    <section class="yearbook-section position-relative bg-light" id="magazine-yearbook-sec"
+        style="padding: 80px 0;">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-red h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-4 position-relative content-shift" style="z-index: 1;">
             <!-- Section Header -->
             <div class="text-center mb-5 animate-yearbook-header">
                 <h2 class="council-watermark">MAGAZINE & YEARBOOK</h2>
@@ -226,8 +232,13 @@
         </div>
     </section>
 
-    <section class="slider-events-section py-5 my-5 position-relative overflow-hidden" id="news-events-sec">
-        <div class="container position-relative news-container-responsive" style="max-width: 1300px;">
+    <section class="slider-events-section py-5 my-5 position-relative overflow-hidden"
+        id="news-events-sec">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container position-relative content-shift news-container-responsive" style="max-width: 1300px; z-index: 1;">
             <!-- Vertical Watermark Heading -->
             <div class="vertical-news-watermark">NEWS & EVENTS</div>
 
@@ -377,7 +388,11 @@
 
     <!-- Magazine & Yearbook Section -->
     <section class="magazine-section py-5 my-5 text-center position-relative">
-        <div class="container" style="max-width: 876px;">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container container-custom position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container position-relative content-shift" style="max-width: 876px; z-index: 1;">
             <!-- Heading -->
             <h2 class="fw-bold mb-3" style="color: #9c9c9c; font-size: 2.2rem; letter-spacing: 2px;">MAGAZINE & YEARBOOK
             </h2>
@@ -447,9 +462,6 @@
             </div>
         </div>
 
-        <!-- Structural left frame line -->
-        <div class="position-absolute d-none d-md-block"
-                                            style="left: 45px; top: -50px; bottom: -50px; width: 3px; background-color: #a92a31;"></div>
     </section>
 
 
@@ -486,7 +498,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
-                            <a href="index.html" class="f-link">Homepage</a>
+                            <a href="home.html" class="f-link">Homepage</a>
                             <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
                             <a href="contact-us.html" class="f-link">Locations</a>
@@ -509,7 +521,8 @@
                         <div class="copyright f-animate-fade" style="transition-delay: 1.2s;">© Learning Alliance 2025
                         </div>
                         <div class="developer-text ms-auto f-animate-fade"
-                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning Alliance</span></div>
+                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning
+                                Alliance</span></div>
                     </div>
                     <div class="v-line f-animate-line" style="height: 50px; margin-top: 20px; transition-delay: 1.4s;">
                     </div>
@@ -685,6 +698,7 @@
         });
     </script>
 
+    <script src="scroll-lines.js"></script>
 </body>
 
 </html>

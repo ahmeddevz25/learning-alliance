@@ -549,7 +549,7 @@ body {
     width: 100%;
     height: 4px;
     background: #004d2c;
-    z-index: 3000;
+    z-index: 500;
     transform-origin: left;
     animation: lineExpandH 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards,
         fadeOutLines 0.8s ease-in 2.5s forwards;
@@ -563,7 +563,7 @@ body {
     width: 4px;
     height: 100%;
     background: #ffce00;
-    z-index: 3000;
+    z-index: 500;
     transform-origin: top;
     animation: lineExpandV 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards,
         fadeOutLines 0.8s ease-in 2.5s forwards;
@@ -2974,15 +2974,7 @@ body {
 
 /* Yellow Vertical Accent Line */
 .programs-detail-section::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 8px;
-    height: 100%;
-    background-color: #fce144;
-    transform: scaleY(var(--line-scale, 1));
-    transform-origin: top;
+    display: none !important;
 }
 
 
@@ -3075,6 +3067,10 @@ body {
 /* Green Vertical Accent Line Variation */
 .green-line-section::before {
     background-color: #005826 !important;
+}
+
+.red-line-section::before {
+    background-color: #ba2a2f !important;
 }
 
 .o-level-section .action-label {
@@ -3446,10 +3442,6 @@ body {
     background-color: #fce144;
 }
 
-.contact-details-section .container {
-    padding-left: 100px;
-    padding-right: 60px;
-}
 
 .contact-info-text {
     font-size: 1.1rem;
@@ -3479,7 +3471,7 @@ body {
     width: 100%;
     height: 400px;
     margin-top: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border: 1px solid #eee;
 }
 
@@ -3488,22 +3480,18 @@ body {
         left: 15px;
         width: 4px;
     }
-    
-    .contact-details-section .container {
-        padding-left: 35px;
-        padding-right: 20px;
-    }
-    
+
+
     .campus-large-title {
         font-size: 2rem;
         text-align: left;
         margin-top: 25px;
     }
-    
+
     .contact-info-text {
         font-size: 1rem;
     }
-    
+
     .campus-map-container {
         height: 300px;
     }
@@ -4354,5 +4342,98 @@ body {
     .yellow-circle-nav-btn.next {
         left: auto !important;
         right: 20px !important;
+    }
+}
+
+/* GLOBAL SCROLL LINE ANIMATION SECTION STYLES */
+.scroll-line-section {
+    position: relative;
+    padding-left: 20px;
+}
+
+.scroll-line-section::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: var(--line-color, #fce144);
+    /* Default to yellow */
+    transform: scaleY(var(--line-scale, 0));
+    transform-origin: top;
+    z-index: 50;
+    /* So it shows above everything */
+}
+
+/* Color variations */
+.scroll-line-section.line-yellow::before {
+    --line-color: #fce144;
+}
+
+.scroll-line-section.line-green::before {
+    --line-color: #005826;
+}
+
+.scroll-line-section.line-red::before {
+    --line-color: #ba2a2f;
+}
+
+/* Explicit alignment to perfectly track the footer .v-line */
+.scroll-line-section.footer-aligned-line {
+    padding-left: 0 !important;
+}
+
+.scroll-line-section.footer-aligned-line::before {
+    left: 22px !important;
+}
+
+/* Shift content away from the tracking lines so it doesn't crash into them */
+.content-shift {
+    padding-left: 55px !important;
+}
+
+@media (max-width: 991px) {
+    .scroll-line-section {
+        padding-left: 0 !important;
+    }
+
+    .scroll-line-section::before {
+        display: none !important;
+        /* Hide on mobile to save space */
+    }
+
+    .content-shift {
+        padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+    }
+}
+
+/* ---- EXPLORE GALLERY MODAL STYLES ---- */
+#exploreGalleryModal .modal-content {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-thumb-wrapper {
+    cursor: pointer;
+    position: relative;
+    background: #f8f9fa;
+}
+
+.gallery-thumb-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item-link {
+    text-decoration: none;
+    display: block;
+}
+
+#galleryTabs .nav-link.active {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #galleryTitle {
+        font-size: 1.5rem !important;
     }
 }

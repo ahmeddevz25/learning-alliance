@@ -25,12 +25,11 @@
     <section class="hero-section about-hero">
         <!-- UI Geometric Lines -->
         <div class="ui-line-h about-line-h"></div>
-        <div class="ui-line-v about-line-v"></div>
 
         <!-- Navbar / Top Header -->
         <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
             <div class="logo">
-                <a href="index.html">
+                <a href="home.html">
                     <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
                 </a>
             </div>
@@ -64,7 +63,7 @@
         <div id="sideMenu" class="side-menu">
             <button id="closeMenu" class="close-btn">&times;</button>
             <nav class="menu-nav">
-                <a href="index.html" class="menu-header">Learning Alliance</a>
+                <a href="home.html" class="menu-header">Learning Alliance</a>
                 <a href="about-us.html" class="active">About us</a>
                 <a href="programs.html">Programs</a>
                 <a href="student-policies.html">Student Policies</a>
@@ -76,12 +75,14 @@
         </div>
     </section>
 
-    <!-- About Content Section -->
+    <!-- About Intro Section -->
     <section class="about-content-section py-5 position-relative">
-        <!-- UI Structural Lines for this section -->
-        <div class="ui-line-v-content tricolor"></div>
-
-        <div class="container py-lg-5">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100"
+            style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
             <div class="row align-items-start mb-5">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <div class="img-reveal-wrapper">
@@ -100,7 +101,17 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Our Campuses Section -->
+    <section class="campuses-section py-5 position-relative bg-white">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100"
+            style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
             <div class="row">
                 <div class="col-12">
                     <h2 class="about-title reveal-text-dark">Our Campuses</h2>
@@ -140,90 +151,100 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Academic Highlight Section (Staggered Checkered Grid) -->
-                    <div class="row g-0 align-items-stretch mt-5">
-                        <!-- Top Row: Box Left, Empty Right -->
-                        <div class="col-lg-6 d-flex">
-                            <div class="highlight-box fade-in-up w-100">
-                                <p class="highlight-text">
-                                    The DHA campus offers the full IB continuum — PYP, MYP,
-                                    and DP — creating a smooth path from Class I to A-Level-equivalent studies.
-                                    Our Faisalabad campus leads the city in innovation, technology, and diversity.
-                                    Learning Alliance continues to champion academic excellence and holistic growth for
-                                    a global future.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-none d-lg-block"></div> <!-- Empty Slot -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <!-- Bottom Row: Empty Left, Image Right -->
-                        <div class="col-lg-6 d-none d-lg-block"></div> <!-- Empty Slot -->
-                        <div class="col-lg-6 d-flex">
-                            <div class="highlight-img-wrapper fade-in-up w-100">
-                                <img src="assets/images/girls.jpg" alt="Students at IB Campus"
-                                    class="img-fluid highlight-img w-100 h-100"
-                                    style="object-fit: cover; min-height: 400px;">
-                            </div>
-                        </div>
+    <!-- Values and Highlights Section -->
+    <section class="values-highlight-section py-5 position-relative">
+        <!-- Absolute tracking container for perfect line alignment with footer -->
+        <div class="container position-absolute h-100"
+            style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-red h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-5 position-relative content-shift" style="z-index: 1;">
+            <!-- Academic Highlight Section (Staggered Checkered Grid) -->
+            <div class="row g-0 align-items-stretch mt-0">
+                <!-- Top Row: Box Left, Empty Right -->
+                <div class="col-lg-6 d-flex">
+                    <div class="highlight-box fade-in-up w-100">
+                        <p class="highlight-text">
+                            The DHA campus offers the full IB continuum — PYP, MYP,
+                            and DP — creating a smooth path from Class I to A-Level-equivalent studies.
+                            Our Faisalabad campus leads the city in innovation, technology, and diversity.
+                            Learning Alliance continues to champion academic excellence and holistic growth for
+                            a global future.
+                        </p>
                     </div>
-                    <!-- Our Values Section (Asymmetrical 4/8 Grid) -->
-                    <div id="valuesGrid" class="row g-0 align-items-stretch mt-5 pt-lg-5">
-                        <!-- Top Left: Boys Image (Short) -->
-                        <div class="col-lg-4 d-flex">
-                            <div class="values-img-wrapper w-100">
-                                <img src="assets/images/boys.jpg" alt="Students in Class" class="img-fluid w-100 h-100"
-                                    style="object-fit: cover; min-height: 250px;">
-                            </div>
-                        </div>
-                        <!-- Top Right: Values Heading (Wide) -->
-                        <div class="col-lg-8 d-flex">
-                            <div class="values-heading-box w-100">
-                                <h2 class="about-title ps-lg-5">Our Values</h2>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block"></div> <!-- Empty Slot -->
 
-                        <!-- Bottom Left: Button Section (Short) -->
-                        <div class="col-lg-4 d-flex">
-                            <div class="values-button-box w-100 d-flex flex-column justify-content-center">
-                                <a href="#" class="value-btn btn-red">Mission Statement <i
-                                        class="fa-solid fa-arrow-right-long rotate-45"></i></a>
-                                <a href="#" class="value-btn btn-yellow">Ethos <i
-                                        class="fa-solid fa-arrow-right-long rotate-45"></i></a>
-                                <a href="#" class="value-btn btn-green">Why Learning Alliance? <i
-                                        class="fa-solid fa-arrow-right-long rotate-45"></i></a>
-                            </div>
-                        </div>
-                        <!-- Bottom Right: Girl Notebook Image (Wide Landscape) -->
-                        <div class="col-lg-8 d-flex">
-                            <div class="values-img-wrapper">
-                                <img src="assets/images/girlnotebook.jpg" alt="Student Studying"
-                                    style="width: 126vh; object-fit: cover; height: 60vh;">
-                            </div>
-                        </div>
+                <!-- Bottom Row: Empty Left, Image Right -->
+                <div class="col-lg-6 d-none d-lg-block"></div> <!-- Empty Slot -->
+                <div class="col-lg-6 d-flex">
+                    <div class="highlight-img-wrapper fade-in-up w-100">
+                        <img src="assets/images/girls.jpg" alt="Students at IB Campus"
+                            class="img-fluid highlight-img w-100 h-100" style="object-fit: cover; min-height: 400px;">
                     </div>
-                    <!-- Academic Stats Section (Counter) -->
-                    <div id="statsSection" class="row mt-5 pt-lg-5 pb-5 justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="stats-container fade-in-up">
-                                <div class="row text-center">
-                                    <div class="col-sm-4 mb-4 mb-sm-0">
-                                        <div class="stat-item">
-                                            <h2 class="stat-number" data-target="37">0<span>%</span></h2>
-                                            <p class="stat-label">A LEVEL RESULT 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 mb-4 mb-sm-0">
-                                        <div class="stat-item">
-                                            <h2 class="stat-number" data-target="41">0<span>%</span></h2>
-                                            <p class="stat-label">O LEVEL RESULT 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="stat-item">
-                                            <h2 class="stat-number" data-target="30">0<span>%</span></h2>
-                                            <p class="stat-label">ATCHISON ACCEPTANCES</p>
-                                        </div>
-                                    </div>
+                </div>
+            </div>
+            <!-- Our Values Section (Asymmetrical 4/8 Grid) -->
+            <div id="valuesGrid" class="row g-0 align-items-stretch mt-5 pt-lg-5">
+                <!-- Top Left: Boys Image (Short) -->
+                <div class="col-lg-4 d-flex">
+                    <div class="values-img-wrapper w-100">
+                        <img src="assets/images/boys.jpg" alt="Students in Class" class="img-fluid w-100 h-100"
+                            style="object-fit: cover; min-height: 250px;">
+                    </div>
+                </div>
+                <!-- Top Right: Values Heading (Wide) -->
+                <div class="col-lg-8 d-flex">
+                    <div class="values-heading-box w-100">
+                        <h2 class="about-title ps-lg-5">Our Values</h2>
+                    </div>
+                </div>
+
+                <!-- Bottom Left: Button Section (Short) -->
+                <div class="col-lg-4 d-flex">
+                    <div class="values-button-box w-100 d-flex flex-column justify-content-center">
+                        <a href="#" class="value-btn btn-red">Mission Statement <i
+                                class="fa-solid fa-arrow-right-long rotate-45"></i></a>
+                        <a href="#" class="value-btn btn-yellow">Ethos <i
+                                class="fa-solid fa-arrow-right-long rotate-45"></i></a>
+                        <a href="#" class="value-btn btn-green">Why Learning Alliance? <i
+                                class="fa-solid fa-arrow-right-long rotate-45"></i></a>
+                    </div>
+                </div>
+                <!-- Bottom Right: Girl Notebook Image (Wide Landscape) -->
+                <div class="col-lg-8 d-flex">
+                    <div class="values-img-wrapper">
+                        <img src="assets/images/girlnotebook.jpg" alt="Student Studying"
+                            style="width: 126vh; object-fit: cover; height: 60vh;">
+                    </div>
+                </div>
+            </div>
+            <!-- Academic Stats Section (Counter) -->
+            <div id="statsSection" class="row mt-5 pt-lg-5 pb-0 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="stats-container fade-in-up">
+                        <div class="row text-center">
+                            <div class="col-sm-4 mb-4 mb-sm-0">
+                                <div class="stat-item">
+                                    <h2 class="stat-number" data-target="37">0<span>%</span></h2>
+                                    <p class="stat-label">A LEVEL RESULT 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 mb-4 mb-sm-0">
+                                <div class="stat-item">
+                                    <h2 class="stat-number" data-target="41">0<span>%</span></h2>
+                                    <p class="stat-label">O LEVEL RESULT 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="stat-item">
+                                    <h2 class="stat-number" data-target="30">0<span>%</span></h2>
+                                    <p class="stat-label">ATCHISON ACCEPTANCES</p>
                                 </div>
                             </div>
                         </div>
@@ -243,8 +264,8 @@
                     <div class="f-box f-red f-animate-box" style="transition-delay: 0.2s;">Where</div>
                     <div class="f-box f-yellow f-animate-box" style="transition-delay: 0.4s;">Potential becomes</div>
                     <div class="f-box f-white f-animate-box" style="transition-delay: 0.6s;">Achievement</div>
-                    <img src="https://learn.fountainhead.pk/wp-content/uploads/2025/10/la.png"
-                        class="footer-logo f-animate-logo" alt="Logo" style="transition-delay: 0.8s;">
+                    <img src="assets/images/logo.jpg" class="footer-logo f-animate-logo" alt="Logo"
+                        style="transition-delay: 0.8s;">
                 </div>
                 <!-- Right Columns -->
                 <div class="col-lg-7 col-md-12">
@@ -265,7 +286,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
-                            <a href="index.html" class="f-link">Homepage</a>
+                            <a href="home.html" class="f-link">Homepage</a>
                             <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
                             <a href="contact-us.html" class="f-link">Locations</a>
@@ -288,7 +309,8 @@
                         <div class="copyright f-animate-fade" style="transition-delay: 1.2s;">© Learning Alliance 2025
                         </div>
                         <div class="developer-text ms-auto f-animate-fade"
-                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning Alliance</span></div>
+                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning
+                                Alliance</span></div>
                     </div>
                     <div class="v-line f-animate-line" style="height: 50px; margin-top: 20px; transition-delay: 1.4s;">
                     </div>
@@ -499,6 +521,7 @@
             }
         });
     </script>
+    <script src="scroll-lines.js"></script>
 </body>
 
 </html>

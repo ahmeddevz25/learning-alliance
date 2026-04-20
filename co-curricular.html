@@ -27,7 +27,7 @@
         <!-- Navbar / Top Header -->
         <header class="top-header d-flex justify-content-between align-items-center px-4 py-3">
             <div class="logo">
-                <a href="index.html">
+                <a href="home.html">
                     <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
                 </a>
             </div>
@@ -50,9 +50,13 @@
     </section>
 
     <!-- Robotics Section -->
-    <section class="co-curricular-detail py-5 bg-white position-relative" id="robotics-sec">
-        <div class="manual-yellow-line"></div>
-        <div class="container py-lg-4">
+    <section class="co-curricular-detail py-5 bg-white position-relative"
+        id="robotics-sec">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-4 position-relative content-shift" style="z-index: 1;">
             <div class="text-center mb-4 animate-header-detail">
                 <h2 class="manual-title">ROBOTICS</h2>
                 <div class="manual-underline"></div>
@@ -87,8 +91,11 @@
 
     <!-- Drama Section -->
     <section class="co-curricular-detail py-5 bg-white position-relative" id="drama-sec">
-        <div class="manual-yellow-line"></div>
-        <div class="container py-lg-4">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-4 position-relative content-shift" style="z-index: 1;">
             <div class="text-center mb-4 animate-header-detail">
                 <h2 class="manual-title">DRAMA & THEATRE</h2>
                 <div class="manual-underline"></div>
@@ -131,8 +138,11 @@
 
     <!-- Music Section -->
     <section class="co-curricular-detail py-5 bg-white position-relative" id="music-sec">
-        <div class="manual-yellow-line"></div>
-        <div class="container py-lg-4">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-red h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-4 position-relative content-shift" style="z-index: 1;">
             <div class="text-center mb-4 animate-header-detail">
                 <h2 class="manual-title">MUSIC</h2>
                 <div class="manual-underline"></div>
@@ -178,9 +188,13 @@
     </section>
 
     <!-- Sports Section -->
-    <section class="co-curricular-detail py-5 bg-white position-relative" id="sports-sec">
-        <div class="manual-yellow-line"></div>
-        <div class="container py-lg-4">
+    <section class="co-curricular-detail py-5 bg-white position-relative"
+        id="sports-sec">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-yellow h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-4 position-relative content-shift" style="z-index: 1;">
             <div class="text-center mb-4 animate-header-detail">
                 <h2 class="manual-title">SPORTS</h2>
                 <div class="manual-underline"></div>
@@ -221,8 +235,11 @@
     </section>
     <!-- Arts Section -->
     <section class="co-curricular-detail py-5 bg-white position-relative" id="arts-sec">
-        <div class="manual-yellow-line"></div>
-        <div class="container py-lg-4">
+        <!-- Absolute tracking container for perfect line alignment -->
+        <div class="container position-absolute h-100" style="top: 0; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 0;">
+            <div class="scroll-line-section line-green h-100 w-100 footer-aligned-line"></div>
+        </div>
+        <div class="container py-lg-4 position-relative content-shift" style="z-index: 1;">
             <div class="text-center mb-4 animate-header-detail">
                 <h2 class="manual-title">ARTS</h2>
                 <div class="manual-underline"></div>
@@ -261,7 +278,7 @@
 
         <button id="closeMenu" class="close-btn">&times;</button>
         <nav class="menu-nav">
-            <a href="index.html" class="menu-header">Learning Alliance</a>
+            <a href="home.html" class="menu-header">Learning Alliance</a>
             <a href="about-us.html">About us</a>
             <a href="programs.html">Programs</a>
             <a href="student-policies.html">Student Policies</a>
@@ -305,7 +322,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
                             <h5 class="f-title">Helpful Links</h5>
-                            <a href="index.html" class="f-link">Homepage</a>
+                            <a href="home.html" class="f-link">Homepage</a>
                             <a href="admissions.html" class="f-link">Admissions</a>
                             <a href="about-us.html" class="f-link">About</a>
                             <a href="contact-us.html" class="f-link">Locations</a>
@@ -328,7 +345,8 @@
                         <div class="copyright f-animate-fade" style="transition-delay: 1.2s;">© Learning Alliance 2025
                         </div>
                         <div class="developer-text ms-auto f-animate-fade"
-                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning Alliance</span></div>
+                            style="transition-delay: 1.2s; position: static;">Developed by Dept of IT<span> - Learning
+                                Alliance</span></div>
                     </div>
                     <div class="v-line f-animate-line" style="height: 50px; margin-top: 20px; transition-delay: 1.4s;">
                     </div>
@@ -531,6 +549,7 @@
             }
         });
     </script>
+    <script src="scroll-lines.js"></script>
 </body>
 
 </html>
