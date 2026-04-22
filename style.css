@@ -622,7 +622,7 @@ body {
 }
 
 .logo img {
-    width: 70px;
+    width: 90px;
     /* Slightly larger for better centering visual */
     height: auto;
 }
@@ -1171,14 +1171,16 @@ body {
 
 /* CARD COLOR VARIATIONS (IMAGES) */
 .card-yellow {
-    background-image: url('images/studentbg.jpg') !important;
+    background-color: #ffce00;
+    background-image: url('assets/images/studentbg.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
 
 .card-green {
-    background-image: url('images/studentbg2.jpg') !important;
+    background-color: #005826;
+    background-image: url('assets/images/studentbg2.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -1190,7 +1192,8 @@ body {
 }
 
 .card-pink {
-    background-image: url('images/studentbg3.jpg') !important;
+    background-color: #a92a31;
+    background-image: url('assets/images/studentbg3.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -1642,25 +1645,8 @@ body {
     border: 1px solid #f0f0f0;
 }
 
-.collaborations-section.show-mission .col-6:nth-child(1) .collab-card {
-    animation: podFloat 6s ease-in-out infinite;
-    animation-delay: 0.1s;
-}
 
-.collaborations-section.show-mission .col-6:nth-child(2) .collab-card {
-    animation: podFloat 6s ease-in-out infinite;
-    animation-delay: 0.3s;
-}
 
-.collaborations-section.show-mission .col-6:nth-child(3) .collab-card {
-    animation: podFloat 6s ease-in-out infinite;
-    animation-delay: 0.5s;
-}
-
-.collaborations-section.show-mission .col-6:nth-child(4) .collab-card {
-    animation: podFloat 6s ease-in-out infinite;
-    animation-delay: 0.7s;
-}
 
 .collaborations-section.show-mission .collab-card {
     opacity: 1;
@@ -1680,7 +1666,6 @@ body {
     font-weight: 800;
     white-space: nowrap;
     z-index: 10;
-    animation: sealPulse 4s infinite ease-in-out;
     box-shadow: 0 8px 20px rgba(251, 223, 63, 0.4);
     letter-spacing: 0.5px;
     border: 2px solid #fff;
@@ -1829,7 +1814,7 @@ body {
 }
 
 .card-red {
-    background-color: #eb2833;
+    background-color: #a92a31;
     color: #fff;
 }
 
@@ -2208,11 +2193,45 @@ body {
 }
 
 /* Enhancing Flipbook Wrapper for triggers */
+.flipbook-anim {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+}
+
 .flipbook-wrapper {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 6px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+
+
+/* Eye-Catching Shine Effect */
+.flipbook-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(115 deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(35deg);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.flipbook-wrapper:hover::after {
+    left: 100%;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .flipbook-wrapper::before {
@@ -4436,4 +4455,23 @@ body {
     #galleryTitle {
         font-size: 1.5rem !important;
     }
+}
+
+/* Magazine Filter Tabs Fix */
+.magazine-filter {
+    background-color: #fff !important;
+    border: 1px solid #e6e6e6 !important;
+    border-radius: 0 !important;
+    color: #333 !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    min-width: 120px !important;
+    transition: all 0.3s ease !important;
+}
+
+.magazine-filter.active,
+.magazine-filter:hover {
+    background-color: #fce144 !important;
+    border-color: #fce144 !important;
+    color: #000 !important;
 }

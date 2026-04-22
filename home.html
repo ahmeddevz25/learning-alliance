@@ -42,7 +42,7 @@
                 <img src="assets/images/logo.jpg" alt="Learning Alliance Logo" height="70">
             </div>
             <div class="menu-btn d-flex flex-column align-items-center">
-                <img src="assets/images/menu-button.jpg" alt="Menu" height="35">
+                <img src="assets/images/menu-button.png" alt="Menu" height="50">
             </div>
         </header>
 
@@ -492,23 +492,18 @@
 
             <!-- Filter Pills -->
             <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
-                <button id="filter-dha" class="magazine-filter btn px-4 py-2"
-                    style="background-color: #fce144; border: 1px solid #fce144; border-radius: 0; font-size: 0.85rem; font-weight: 500; min-width: 120px;">DHA</button>
-                <button class="magazine-filter btn bg-white px-4 py-2"
-                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Aziz
-                    Avenue</button>
-                <button class="magazine-filter btn bg-white px-4 py-2"
-                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Gulberg</button>
-                <button class="magazine-filter btn bg-white px-4 py-2"
-                    style="border: 1px solid #e6e6e6; border-radius: 0; color: #333; font-size: 0.85rem; font-weight: 500; min-width: 120px;">Faisalabad</button>
+                <button class="magazine-filter active btn px-4 py-2" data-campus="dha">DHA</button>
+                <button class="magazine-filter btn px-4 py-2" data-campus="aziz">Aziz Avenue</button>
+                <button class="magazine-filter btn px-4 py-2" data-campus="gulberg">Gulberg</button>
+                <button class="magazine-filter btn px-4 py-2" data-campus="faisalabad">Faisalabad</button>
             </div>
 
-            <!-- Flipbooks Row -->
-            <div class="row pt-4 pb-5 justify-content-center gx-5">
+            <!-- Flipbooks Row (DHA) -->
+            <div class="row pt-4 pb-5 justify-content-center gx-5 magazine-row magazine-row-dha">
                 <!-- Book 1 (Offset: Red) -->
                 <div class="col-md-4 mb-5 mb-md-0 px-4">
                     <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine1.pdf"
-                        style="box-shadow: -15px 15px 0px 0px #ac3437; background-color: #fff; cursor: pointer;">
+                        style="background-color: #fff; cursor: pointer;">
                         <img src="assets/images/flipbook1.jpg" class="img-fluid w-100"
                             style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2022-23">
                     </div>
@@ -516,7 +511,7 @@
                 <!-- Book 2 (Offset: Green) -->
                 <div class="col-md-4 mb-5 mb-md-0 px-4">
                     <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine2.pdf"
-                        style="box-shadow: -15px 15px 0px 0px #136236; background-color: #fff; cursor: pointer;">
+                        style="background-color: #fff; cursor: pointer;">
                         <img src="assets/images/flipbook2.jpg" class="img-fluid w-100"
                             style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2024">
                     </div>
@@ -524,8 +519,92 @@
                 <!-- Book 3 (Offset: Yellow) -->
                 <div class="col-md-4 px-4">
                     <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine3.pdf"
-                        style="box-shadow: -15px 15px 0px 0px #f8cf28; background-color: #fff; cursor: pointer;">
+                        style="background-color: #fff; cursor: pointer;">
                         <img src="assets/images/flipbook3.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2025">
+                    </div>
+                </div>
+            </div>
+            <!-- Flipbooks Row (Aziz Avenue) -->
+            <div class="row pt-4 pb-5 justify-content-center gx-5 magazine-row magazine-row-aziz"
+                style="display: none;">
+                <!-- Book 1 (Offset: Red) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine1.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/milestone-aziz-avenue-2024.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2022-23">
+                    </div>
+                </div>
+                <!-- Book 2 (Offset: Green) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine2.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/Milestone-Aziz-Avenue-2025.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2024">
+                    </div>
+                </div>
+                <!-- Book 3 (Offset: Yellow) -->
+                <div class="col-md-4 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine3.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/yearbook-Aziz-Avenue-2025.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2025">
+                    </div>
+                </div>
+            </div>
+            <!-- Flipbooks Row (Gulber) -->
+            <div class="row pt-4 pb-5 justify-content-center gx-5 magazine-row magazine-row-gulberg"
+                style="display: none;">
+                <!-- Book 1 (Offset: Red) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine1.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/Yearbook-Gulberg-2025.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2022-23">
+                    </div>
+                </div>
+                <!-- Book 2 (Offset: Green) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine2.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/milestone-Gulberg-2024.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2024">
+                    </div>
+                </div>
+                <!-- Book 3 (Offset: Yellow) -->
+                <div class="col-md-4 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine3.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/Milestone-Gulberg-2025.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2025">
+                    </div>
+                </div>
+            </div>
+            <!-- Flipbooks Row (faislabad) -->
+            <div class="row pt-4 pb-5 justify-content-center gx-5 magazine-row magazine-row-faisalabad"
+                style="display: none;">
+                <!-- Book 1 (Offset: Red) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine1.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/Yearbook-Faisalabad-2025.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2022-23">
+                    </div>
+                </div>
+                <!-- Book 2 (Offset: Green) -->
+                <div class="col-md-4 mb-5 mb-md-0 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine2.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/milestone-faisalabad-2024.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2024">
+                    </div>
+                </div>
+                <!-- Book 3 (Offset: Yellow) -->
+                <div class="col-md-4 px-4">
+                    <div class="flipbook-wrapper flipbook-anim flipbook-trigger" data-pdf="assets/pdf/magazine3.pdf"
+                        style="background-color: #fff; cursor: pointer;">
+                        <img src="assets/images/Milestone-Faisalabad-2025.jpg" class="img-fluid w-100"
                             style="object-fit: cover; aspect-ratio: 3/4;" alt="Yearbook 2025">
                     </div>
                 </div>
@@ -534,20 +613,20 @@
             <div class="d-flex justify-content-end align-items-center mt-5">
                 <span class="fs-5 me-3" style="font-weight: 500;">Follow us on social media</span>
                 <div class="social-icons d-flex gap-2">
-                    <a href="#"
+                    <a href="https://www.instagram.com/Learning_Alliance/" target="_blank"
                         class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
                         style="width: 32px; height: 32px; text-decoration: none;">
                         <i class="fa-brands fa-instagram fs-6"></i>
                     </a>
-                    <a href="#"
+                    <a href="https://www.facebook.com/LearningAlliance.LahorePreschool" target="_blank"
                         class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
                         style="width: 32px; height: 32px; text-decoration: none;">
                         <i class="fa-brands fa-facebook-f fs-6"></i>
                     </a>
-                    <a href="#"
+                    <a href="https://www.youtube.com/channel/UCglZev_w-vaquQJkVuLFcug" target="_blank"
                         class="d-inline-flex align-items-center justify-content-center bg-black text-white rounded-circle"
                         style="width: 32px; height: 32px; text-decoration: none;">
-                        <i class="fa-brands fa-linkedin-in fs-6"></i>
+                        <i class="fa-brands fa-youtube fs-6"></i>
                     </a>
                 </div>
             </div>
@@ -1014,9 +1093,12 @@
                             </div>
 
                             <div class="social-icons">
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/Learning_Alliance/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/LearningAlliance.LahorePreschool"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.youtube.com/channel/UCglZev_w-vaquQJkVuLFcug"><i
+                                        class="fa-brands fa-youtube-in"></i></a>
                             </div>
                         </div>
 
@@ -1283,43 +1365,80 @@
                     animateSlideContent(e.relatedTarget);
                 });
 
-                // GSAP ANIMATION FOR MAGAZINE FLIPBOOKS (Zoom In Effect)
-                const flipbooks = document.querySelectorAll('.flipbook-anim');
-                if (flipbooks.length > 0) {
-                    // Set initial state: visible but ready to animate
-                    gsap.set(flipbooks, { zIndex: 10, scale: 1, opacity: 1 });
+            }
 
-                    gsap.from(flipbooks, {
-                        scale: 0.85,
+            // GSAP ANIMATION FOR MAGAZINE FLIPBOOKS (Reference Match: Zoom In Effects)
+            const flipbooks = gsap.utils.toArray('.flipbook-anim');
+            if (flipbooks.length > 0) {
+                flipbooks.forEach((book, index) => {
+                    let startX = 0;
+                    if (index === 0) startX = -150; // ZoomInLeft
+                    if (index === 2) startX = 150;  // ZoomInRight
+
+                    gsap.fromTo(book, {
                         opacity: 0,
-                        duration: 1,
-                        stagger: 0.15,
-                        ease: "power2.out",
+                        scale: 0,
+                        x: startX,
+                        visibility: 'hidden'
+                    }, {
+                        opacity: 1,
+                        scale: 1,
+                        x: 0,
+                        visibility: 'visible',
+                        duration: 2.2,
+                        delay: index * 0.4, // Slightly more stagger
+                        ease: "power4.out",
                         scrollTrigger: {
                             trigger: ".magazine-section",
-                            start: "top 85%",
+                            start: "top 75%",
                             toggleActions: "play none none none"
                         }
                     });
+                });
 
-                    // Filter Clicks - Unified Grid State
-                    const filterBtns = document.querySelectorAll('.magazine-filter');
-                    filterBtns.forEach(btn => {
-                        btn.addEventListener('click', function () {
-                            const tl = gsap.timeline();
-                            // Briefly fade/scale slightly for movement feel, then return to exact 1:1 same size
-                            tl.to(flipbooks, { opacity: 0, scale: 0.9, duration: 0.2 })
-                                .set(flipbooks, { scale: 1, zIndex: 10, x: 0 })
-                                .to(flipbooks, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.05, ease: "power2.out" });
-                        });
+                // Filter Clicks - Staggered Re-reveal (Center Zoom)
+                const filterBtns = document.querySelectorAll('.magazine-filter');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const campus = this.getAttribute('data-campus');
+
+                        // Toggle active class
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+
+                        // Switch Rows
+                        document.querySelectorAll('.magazine-row').forEach(row => row.style.display = 'none');
+                        const targetRow = document.querySelector(`.magazine-row-${campus}`);
+                        if (targetRow) {
+                            targetRow.style.display = 'flex';
+
+                            // Get flipbooks in the new row
+                            const activeFlipbooks = targetRow.querySelectorAll('.flipbook-anim');
+
+                            // Reset and Animate
+                            gsap.fromTo(activeFlipbooks,
+                                { opacity: 0, scale: 0, y: 0, x: 0 },
+                                {
+                                    opacity: 1, scale: 1,
+                                    duration: 1.8, stagger: 0.15,
+                                    ease: "power4.out",
+                                    delay: 0.1
+                                }
+                            );
+                        }
                     });
-                }
+                });
             }
 
             // Initialize Faculty Swiper
-            if (document.querySelector('.facultySwiper')) {
-                const facultySwiper = new Swiper('.facultySwiper', {
-                    slidesPerView: 1.2, // Show a peek of next slide for mobile
+            let facultySwiper;
+            const facultyWrapper = document.querySelector('.facultySwiper .swiper-wrapper');
+            const originalFacultySlides = facultyWrapper ? Array.from(facultyWrapper.children) : [];
+
+            function initFacultySwiper() {
+                if (facultySwiper) facultySwiper.destroy(true, true);
+                facultySwiper = new Swiper('.facultySwiper', {
+                    slidesPerView: 1.2,
                     centeredSlides: true,
                     spaceBetween: 20,
                     loop: true,
@@ -1335,24 +1454,22 @@
                         prevEl: '.faculty-nav-prev',
                     },
                     breakpoints: {
-                        640: {
-                            slidesPerView: 2,
-                            centeredSlides: false,
-                            spaceBetween: 30,
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                            centeredSlides: false,
-                            spaceBetween: 30,
-                        },
+                        640: { slidesPerView: 2, centeredSlides: false, spaceBetween: 30 },
+                        1024: { slidesPerView: 4, centeredSlides: false, spaceBetween: 30 }
                     }
                 });
+            }
+
+            if (document.querySelector('.facultySwiper')) {
+                initFacultySwiper();
 
                 // Campus Filter Interactivity Logic (Faculty Section)
                 const facultyCampusBtns = document.querySelectorAll('.campus-filter-btn');
                 facultyCampusBtns.forEach(btn => {
                     btn.addEventListener('click', function () {
-                        // Reset all buttons in this section
+                        const campusName = this.textContent.trim();
+
+                        // Reset all buttons
                         facultyCampusBtns.forEach(b => {
                             b.style.backgroundColor = '#f1f2f2';
                             b.classList.remove('active');
@@ -1361,14 +1478,29 @@
                         this.style.backgroundColor = '#fce144';
                         this.classList.add('active');
 
+                        // Puzzle/Shuffle Logic
+                        // 1. Destroy current swiper
+                        facultySwiper.destroy(true, true);
+
+                        // 2. Clear and Reorder DOM
+                        facultyWrapper.innerHTML = '';
+                        let slidesToDisplay = [...originalFacultySlides];
+
+                        if (campusName !== 'DHA') {
+                            // Shuffle for other campuses to make them look different
+                            slidesToDisplay.sort(() => Math.random() - 0.5);
+                        }
+
+                        slidesToDisplay.forEach(slide => facultyWrapper.appendChild(slide));
+
+                        // 3. Re-initialize
+                        initFacultySwiper();
+
                         // Refresh/Animate the slider
                         gsap.fromTo('.facultySwiper',
-                            { opacity: 0, x: 20 },
-                            { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
+                            { opacity: 0, scale: 0.95 },
+                            { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }
                         );
-
-                        // Restart autoplay on change if needed
-                        facultySwiper.autoplay.start();
                     });
                 });
             }

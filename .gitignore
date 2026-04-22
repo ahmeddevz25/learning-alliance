@@ -2,3 +2,5 @@ assets/webvideo.mp4
 node_modules/
 .DS_Store
 *.log
+
+DumpStack.log
