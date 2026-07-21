@@ -40,30 +40,7 @@
         <!-- Main Content -->
         <div
             class="container h-100 d-flex flex-column justify-content-center align-items-center text-center position-relative z-2">
-            <h1 class="policies-title text-white mb-5 animate-text">Life at LA</h1>
-
-            <div class="d-flex flex-wrap justify-content-center gap-3 animate-buttons">
-                <a href="#life-intro-sec" class="policy-btn">Life at LA</a>
-                <a href="#student-council-sec" class="policy-btn">Student Council</a>
-                <a href="#magazine-yearbook-sec" class="policy-btn">Term Dates</a>
-                <a href="#magazine-yearbook-sec" class="policy-btn">Magazine & Yearbook</a>
-                <a href="#news-events-sec" class="policy-btn">News & Events</a>
-                <a href="#" class="policy-btn">OSLA</a>
-            </div>
-        </div>
-
-        <!-- Unity Marquee -->
-        <div class="unity-marquee-wrapper">
-            <div class="unity-marquee-content">
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-                <div class="unity-item">Unity . Faith . Discipline</div>
-            </div>
+            <h1 class="policies-title text-white mb-0 animate-text">Life at LA</h1>
         </div>
 
         <!-- Side Menu -->
@@ -81,6 +58,21 @@
             </nav>
         </div>
     </section>
+
+    <!-- Tabs Navigation Section -->
+    <div class="tabs-subnav-section py-4 border-bottom position-relative z-3">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-3 animate-buttons">
+                <a href="#life-intro-sec" class="policy-btn">Life at LA</a>
+                <a href="#student-council-sec" class="policy-btn">Student Council</a>
+                <a href="#magazine-yearbook-sec" class="policy-btn">Term Dates</a>
+                <a href="#magazine-yearbook-sec" class="policy-btn">Magazine & Yearbook</a>
+                <a href="#news-events-sec" class="policy-btn">News & Events</a>
+                <a href="#" class="policy-btn">OSLA</a>
+            </div>
+        </div>
+    </div>
+
     <section id="life-intro-sec" class="life-intro-section py-5 position-relative overflow-hidden">
         <!-- Absolute tracking container for perfect line alignment -->
         <div class="container container-custom position-absolute h-100"
@@ -564,12 +556,14 @@
 
             // Marquee Animation
             const marquee = document.querySelector('.unity-marquee-content');
-            gsap.to(marquee, {
-                x: "-50%",
-                duration: 20,
-                repeat: -1,
-                ease: "none"
-            });
+            if (marquee) {
+                gsap.to(marquee, {
+                    x: "-50%",
+                    duration: 20,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
 
             // Menu Toggle
             const menuBtn = document.querySelector('.menu-btn');
@@ -756,6 +750,7 @@
     </script>
 
     <script src="scroll-lines.js"></script>
+    <script src="search.js"></script>
 </body>
 
 </html>
